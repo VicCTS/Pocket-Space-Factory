@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviour
     public GameObject exitBox;
     public GameObject privacyPolicyBox;
     public GameObject termsOfServiceBox;
+    public GameObject statisticsBox;
 
     private Animator anim;
 
@@ -121,7 +122,6 @@ public class MenuManager : MonoBehaviour
     public void HideCreditsMenu()
     {
         creditsBox.GetComponent<Animator>().SetInteger("StateBox", 2);
-        player.GetComponent<RayMenu>().ReturnToStartPoint();
     }
 
     public void ShowPrivacyPolicyMenu()
@@ -132,7 +132,6 @@ public class MenuManager : MonoBehaviour
     public void HidePrivacyPolicyMenu()
     {
         privacyPolicyBox.GetComponent<Animator>().SetInteger("StateBox", 2);
-        player.GetComponent<RayMenu>().ReturnToStartPoint();
     }
 
     public void ShowTermsOfServiceMenu()
@@ -143,7 +142,16 @@ public class MenuManager : MonoBehaviour
     public void HideTermsOfServiceMenu()
     {
         termsOfServiceBox.GetComponent<Animator>().SetInteger("StateBox", 2);
-        player.GetComponent<RayMenu>().ReturnToStartPoint();
+    }
+
+    public void ShowStatisticsMenu()
+    {
+        statisticsBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HideStatisticsMenu()
+    {
+        statisticsBox.GetComponent<Animator>().SetInteger("StateBox", 2);
     }
 
     public void PlayGame()
@@ -156,3 +164,5 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 }
+
+
