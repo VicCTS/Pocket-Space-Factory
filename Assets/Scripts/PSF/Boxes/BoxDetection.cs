@@ -6,9 +6,11 @@ public class BoxDetection : MonoBehaviour
 {
     public float destructionTime;
 
-    private void Start()
-    {
+    public ParticleSystem coins;
 
+    private void Awake()
+    {   
+        coins = GameObject.Find("Coins").GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -26,6 +28,7 @@ public class BoxDetection : MonoBehaviour
 
     private IEnumerator BoxDestruction()
     {
+        coins.Play();
         yield return new WaitForSeconds(destructionTime);
         Destroy(gameObject);
     }
