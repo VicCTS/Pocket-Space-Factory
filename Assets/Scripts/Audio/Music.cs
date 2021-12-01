@@ -5,6 +5,9 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     public AudioClip menuMusic;
+    public AudioClip inGameMusic;
+    public AudioClip gameOverMusic;
+    public AudioClip victoyMusic;
     private AudioSource audioSource;
     private static Music musicInstance;
 
@@ -35,5 +38,31 @@ public class Music : MonoBehaviour
     {
         audioSource.Stop();
     }
+    
+    public void PlayGameSoundtrack()
+    {
+         audioSource.clip = inGameMusic;
+         if (Global.canAudioPlay == true)
+        {
+            audioSource.Play();
+        }
+    }
+     public void PlayGameOverSoundtrack()
+    {
+         audioSource.clip = gameOverMusic;
+         if (Global.canAudioPlay == true)
+        {
+            audioSource.Play();
+        }
+    }
+    public void PlayVictorySoundtrack()
+    {
+         audioSource.clip = victoyMusic;
+         if (Global.canAudioPlay == true)
+        {
+            audioSource.Play();
+        }
+    }
+    
 }
 

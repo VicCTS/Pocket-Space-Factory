@@ -40979,7 +40979,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969737066}
-  m_LocalRotation: {x: 0.15183155, y: 0.000000008503449, z: -0.000000001306236, w: 0.9884064}
+  m_LocalRotation: {x: 0.15183155, y: -0.000000008503448, z: 0.0000000013062359, w: 0.9884064}
   m_LocalPosition: {x: 17.2, y: 5.724, z: 3.9600005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -99707,6 +99707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980838882}
+  - component: {fileID: 1980838883}
   m_Layer: 0
   m_Name: Audios 3D
   m_TagString: Untagged
@@ -99731,6 +99732,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980838883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980838881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fd8960108961047a45f88957679e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sFXObjects:
+  - {fileID: 1242742504}
+  - {fileID: 974957611}
+  - {fileID: 1143044520}
 --- !u!1001 &1982621319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105343,7 +105360,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126628556}
-  m_LocalRotation: {x: 0.15183155, y: 0.000000008503449, z: -0.000000001306236, w: 0.9884064}
+  m_LocalRotation: {x: 0.15183155, y: -0.000000008503448, z: 0.0000000013062359, w: 0.9884064}
   m_LocalPosition: {x: 17.2, y: 5.724, z: 3.9600005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

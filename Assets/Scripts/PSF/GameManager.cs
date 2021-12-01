@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public int actualBoxType;
 
     private SFXManager sfxManager;
+    private Music soundManager;
     private Machine2 machine2;
     private Machine1 machine1;
     private Machine3 machine3;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         machine3 = GetComponent<Machine3>();
         machine1 = GetComponent<Machine1>();
         sfxManager = GameObject.Find("FXManager").GetComponent<SFXManager>();
+        soundManager = GameObject.Find("MusicManager").GetComponent<Music>();
         isPlaying = false;
     }
 
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("NIVELLMAX: " + Global.maxLevelPublished);
             Debug.Log("MAXLVLARRIBAT: " + Global.maxLevel);
 
-
+        soundManager.PlayGameSoundtrack();
     }
 
    public void LoadLevel(int num)
@@ -172,11 +174,13 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         boxLevelFail.GetComponent<Animator>().SetInteger("StateBox", 1);
+        soundManager.PlayGameOverSoundtrack();
     }
 
     public void ShowLevelCompleted()
     {
         boxLevelSuccess.GetComponent<Animator>().SetInteger("StateBox", 1);
+        soundManager.PlayVictorySoundtrack();
     }
 
     public void ShowGameCompleted()
