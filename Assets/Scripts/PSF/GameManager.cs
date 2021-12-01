@@ -69,8 +69,8 @@ public class GameManager : MonoBehaviour
            Debug.Log("PUNTUACIÓMAXIMAAQUESTNIVELL: "+ Global.maxScore);
            Debug.Log("NIVELLACTUAL: "+ num);
             Global.requestBox.Add(2);
-         //   Global.requestBox.Add(2);
-         //   Global.requestBox.Add(2);
+            //Global.requestBox.Add(2);
+            //Global.requestBox.Add(2);
 
             Global.machine1BoxTime = 25;
             Global.machine2BoxTime = 10;
