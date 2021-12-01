@@ -25,7 +25,9 @@ public class Machine3 : MonoBehaviour
     private float nextTime;             //Variable auxiliar.
     private float pauseTime;            //Sirve para regular el temporizador por segundos.
     private bool wait;                  //Sirve para controlar el timer segun el tiempo de animacion.
+    public bool boxSpawned;
     private GameManager gameManager; 
+    public Animator anim; 
     private float timePercent           //Variable que realiza una funcion. Convierte el tiempo que queda en un porcentaje.
     {
         get {return (float) totalTime / Global.machine3BoxTime;}
@@ -54,6 +56,7 @@ public class Machine3 : MonoBehaviour
         nextTime = 0;     
         pauseTime = 1f;   //Interval time (1 = 1 second)
         wait = false;     // Para la animacion
+        boxSpawned = false; 
     }
 
     public void PauseMachine3()
@@ -84,6 +87,7 @@ public class Machine3 : MonoBehaviour
 
                 //ACTION
                 ActionMachine3();
+                Animation();
             }
         }  
     }
@@ -118,8 +122,11 @@ public class Machine3 : MonoBehaviour
 
     IEnumerator WaitAnim()
     {
-        yield return new WaitForSeconds(animTime);
+        yield return new WaitForSeconds(4);
         wait = true;
+        anim.SetBool("GruaOn", false);
+        yield return new WaitForSeconds(4);
+        boxSpawned = true;
     }
 
     public void SpawnBox()
@@ -127,6 +134,23 @@ public class Machine3 : MonoBehaviour
         if(accumulatedBoxes <  Global.machine2accumulatedBoxesLimit)
         {
             Instantiate(box, spawnPosition.transform.position, Quaternion.identity, parentObject.transform);
+        }
+    }
+
+    public void Animation()
+    {
+        if(accumulatedBoxes <  Global.machine2accumulatedBoxesLimit)
+        {
+            if(totalTime == 0) //
+            {
+                anim.SetBool("GruaOn", true);              
+            }
+
+            if(boxSpawned == true)
+            {
+                anim.SetTrigger("TakeOff");
+                boxSpawned = false;
+            }
         }
     }
 }
