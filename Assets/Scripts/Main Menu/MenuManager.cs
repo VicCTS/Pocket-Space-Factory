@@ -20,6 +20,8 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsBox;
     public GameObject optionsBox;
     public GameObject exitBox;
+    public GameObject privacyPolicyBox;
+    public GameObject termsOfServiceBox;
 
     private Animator anim;
 
@@ -119,6 +121,28 @@ public class MenuManager : MonoBehaviour
     public void HideCreditsMenu()
     {
         creditsBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+        player.GetComponent<RayMenu>().ReturnToStartPoint();
+    }
+
+    public void ShowPrivacyPolicyMenu()
+    {
+        privacyPolicyBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HidePrivacyPolicyMenu()
+    {
+        privacyPolicyBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+        player.GetComponent<RayMenu>().ReturnToStartPoint();
+    }
+
+    public void ShowTermsOfServiceMenu()
+    {
+        termsOfServiceBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HideTermsOfServiceMenu()
+    {
+        termsOfServiceBox.GetComponent<Animator>().SetInteger("StateBox", 2);
         player.GetComponent<RayMenu>().ReturnToStartPoint();
     }
 
