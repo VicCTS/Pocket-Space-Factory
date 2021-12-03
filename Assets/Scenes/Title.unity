@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6016,14 +6016,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &5997917821892996800
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997917821892996801}
-  m_Enabled: 1
 --- !u!1 &5997917821892996801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,7 +6026,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5997917821892996814}
   - component: {fileID: 5997917821892996815}
-  - component: {fileID: 5997917821892996800}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
