@@ -16769,8 +16769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneDestinationName: PSF
   player: {fileID: 1199330243}
-  audioManager: {fileID: 745452782}
-  sfxManager: {fileID: 818582284}
+  audioManager: {fileID: 0}
+  sfxManager: {fileID: 0}
   playBox: {fileID: 2048735291}
   creditsBox: {fileID: 1534053904}
   optionsBox: {fileID: 1997060942}

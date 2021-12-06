@@ -26,12 +26,19 @@ public class MenuManager : MonoBehaviour
 
     private Animator anim;
 
+    void Awake()
+    {
+        sfxManager = GameObject.Find("FXManager");
+        audioManager = GameObject.Find("MusicManager");
+    }
+
     void Start()
     {
-        if (Global.isPlayingMusic == false)
+        /*if (Global.isPlayingMusic == false)
         {
             AudioOn();
-        }
+        }*/
+        AudioOn();
     }
 
     //AUDIO
@@ -164,5 +171,3 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 }
-
-

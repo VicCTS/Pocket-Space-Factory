@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject boxLevelFail;
     public GameObject boxLevelSuccess;
     public GameObject boxGameEnd;
+    public GameObject pauseBox;
 
     [Header("State")]
     public bool isPlaying;           //Determina si estamos jugando o no. Hace referencia a cuando ponemos pause.
@@ -220,12 +221,23 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("PSF");
     }
 
-
-    public void RestartLevel(){
-         SceneManager.LoadScene("PSF");
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("PSF");
     }
 
-    public void ScoreFinal(){
+    public void ScoreFinal()
+    {
 
+    }
+
+    public void ShowPauseMenu()
+    {
+        pauseBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HidePauseMenu()
+    {
+        pauseBox.GetComponent<Animator>().SetInteger("StateBox", 2);
     }
 }
