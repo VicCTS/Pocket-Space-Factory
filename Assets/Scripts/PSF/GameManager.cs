@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private Machine2 machine2;
     private Machine1 machine1;
     private Machine3 machine3;
-    private PlayerController playerController;
+    public PlayerController playerController;
 
     private void Awake() 
     {
@@ -231,7 +231,6 @@ public class GameManager : MonoBehaviour
 
     public void ShowLevelCompleted()
     {
-        playerController.cantMove = true;
         PauseGame();
         boxLevelSuccess.GetComponent<Animator>().SetInteger("StateBox", 1);
         soundManager.PlayVictorySoundtrack();
@@ -240,7 +239,6 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameCompleted()
     {
-        playerController.cantMove = true;
         PauseGame();
         boxGameEnd.GetComponent<Animator>().SetInteger("StateBox", 1);
     }
@@ -260,11 +258,9 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
             ShowPauseMenu();
-            //playerController.cantMove = true;
         } else
         {
             StartCoroutine(HidePauseMenu());
-            //playerController.cantMove = false;
         }
     }
 
