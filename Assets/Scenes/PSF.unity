@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0011865182, g: 0.009806752, b: 0.051371597, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011891023, g: 0.009796747, b: 0.051157087, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -59935,7 +59935,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1299121771}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowPauseMenu
+        m_MethodName: PauseGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78836,6 +78836,7 @@ MonoBehaviour:
   box1: {fileID: 21300000, guid: 079c4be903b677d41aad1a3054102db8, type: 3}
   box2: {fileID: 21300000, guid: 2f3da1ed009d55849843fc478507f20b, type: 3}
   box3: {fileID: 21300000, guid: 2d1ccb9dedec32642994ee1c6a782dd3, type: 3}
+  waitTimeUnpause: 2
   boxLevelFail: {fileID: 1489804395}
   boxLevelSuccess: {fileID: 1240224614}
   boxGameEnd: {fileID: 1403974428}
@@ -113119,7 +113120,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1299121771}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: HidePauseMenu
+        m_MethodName: PauseGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Sprite box1;
     public Sprite box2;
     public Sprite box3;
+    public float waitTimeUnpause;
 
     [Header("UI Boxes")]
     public GameObject boxLevelFail;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     private Machine2 machine2;
     private Machine1 machine1;
     private Machine3 machine3;
+    private PlayerController playerController;
 
     private void Awake() 
     {
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
         sfxManager = GameObject.Find("FXManager").GetComponent<SFXManager>();
         soundManager = GameObject.Find("MusicManager").GetComponent<Music>();
         isPlaying = false;
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     private void Start() 
@@ -203,9 +206,12 @@ public class GameManager : MonoBehaviour
         if (isPlaying == true)
         {
             PauseGame();
+            ShowPauseMenu();
+            playerController.cantMove = true;
         } else
         {
-            unPauseGame();
+            StartCoroutine(HidePauseMenu());
+            playerController.cantMove = false;
         }
     }
 
@@ -236,8 +242,10 @@ public class GameManager : MonoBehaviour
         pauseBox.GetComponent<Animator>().SetInteger("StateBox", 1);
     }
 
-    public void HidePauseMenu()
+    IEnumerator HidePauseMenu()
     {
         pauseBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+        yield return new WaitForSeconds(waitTimeUnpause);
+        unPauseGame();
     }
 }
