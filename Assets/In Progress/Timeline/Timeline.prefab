@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8206974486305675137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8206974486305675139}
+  - component: {fileID: 8206974486305675136}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8206974486305675139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8206974486305675137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 19.585373, z: -7.1756115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &8206974486305675136
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8206974486305675137}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 2080279283952356770, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8946131897692003380, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4233235482495322287, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3754978776970995730, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7204961605701497099, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 758270895892230258, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7779737378131203896, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8987316868767861593, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7156777714876119064, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -242067546311827078, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7169184772450393180, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 5939812086884110869, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 756722940544650317, guid: 672257df4b5c04d4aa231adf5b199382, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References:
+    - 8224eb413b7e4a1448e76b6db8c111f9: {fileID: 0}
+    - 28e68eb940591c247aa0c7df6cd5073a: {fileID: 0}
+    - 14ac5a3a051680b4c8b9cb5e60de663b: {fileID: 0}
+    - 7f933fc1047d1e84aa33a48985fd7209: {fileID: 0}
+    - 0c2c2f152c4e13642b45db559be56110: {fileID: 0}
+    - db15df53d5071314c9ae1860bf45f0cb: {fileID: 0}
+    - a4a36c1bcb2ad454c84d06776c44113b: {fileID: 0}
+    - ceefd288a820ea943b51650a9dc0867b: {fileID: 0}
+    - c8d293f88b128804fb3463fcffea56e4: {fileID: 0}
+    - b1c6195e2e9339d4c9ac95e604a9ac81: {fileID: 0}
+    - 45b1c24d8311ba04fae34483a1c58fcc: {fileID: 0}
+    - 37105d648d763c64aa12190017da6284: {fileID: 0}
