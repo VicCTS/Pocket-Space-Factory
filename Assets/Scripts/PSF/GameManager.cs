@@ -63,6 +63,51 @@ public class GameManager : MonoBehaviour
         soundManager.PlayGameSoundtrack();
     }
 
+    //AUDIO
+    public void AudioControl()
+    {
+        if (Global.canAudioPlay == true)
+        {
+           Global.canAudioPlay = false;
+           AudioOff();
+           Debug.Log("SOUND_OFF");
+        } else 
+        {
+           Global.canAudioPlay = true;
+           AudioOn();
+           Debug.Log("SOUND_ON");
+        }
+    }
+
+    public void SFXControl()
+    {
+        if (Global.canSFXPlay == true)
+        {
+           Global.canSFXPlay = false;
+           Debug.Log("SFX_OFF");
+        } else 
+        {
+           Global.canSFXPlay = true;
+           Debug.Log("SFX_ON");
+        }
+    }
+
+    public void AudioOn()
+    {
+        Global.canAudioPlay = true;
+        soundManager.GetComponent<Music>().PlayGameSoundtrack();
+        Global.isPlayingMusic = true;
+        Debug.Log("SOUND_ON_2");
+    }
+
+    public void AudioOff()
+    {
+        Global.canAudioPlay = false;
+        soundManager.GetComponent<Music>().StopMenuSoundtrack();
+        Global.isPlayingMusic = false;
+        Debug.Log("SOUND_OFF_2");
+    }
+
    public void LoadLevel(int num)
    {
        // 1 - red box
@@ -124,6 +169,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        playerController.cantMove = true;
         machine2.PauseMachine2();
         machine1.PauseMachine1();
         machine3.PauseMachine3();
@@ -132,6 +178,7 @@ public class GameManager : MonoBehaviour
 
     private void unPauseGame()
     {
+        playerController.cantMove = false;
         machine2.PlayMachine2();
         machine1.PlayMachine1();
         machine3.PlayMachine3();
@@ -179,16 +226,22 @@ public class GameManager : MonoBehaviour
     {
         boxLevelFail.GetComponent<Animator>().SetInteger("StateBox", 1);
         soundManager.PlayGameOverSoundtrack();
+        PauseGame();
     }
 
     public void ShowLevelCompleted()
     {
+        playerController.cantMove = true;
+        PauseGame();
         boxLevelSuccess.GetComponent<Animator>().SetInteger("StateBox", 1);
         soundManager.PlayVictorySoundtrack();
+        
     }
 
     public void ShowGameCompleted()
     {
+        playerController.cantMove = true;
+        PauseGame();
         boxGameEnd.GetComponent<Animator>().SetInteger("StateBox", 1);
     }
 
@@ -207,11 +260,11 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
             ShowPauseMenu();
-            playerController.cantMove = true;
+            //playerController.cantMove = true;
         } else
         {
             StartCoroutine(HidePauseMenu());
-            playerController.cantMove = false;
+            //playerController.cantMove = false;
         }
     }
 
