@@ -7,12 +7,14 @@ public class MeteoriteController : MonoBehaviour
     public GameObject[] rocks;
     public GameObject parentObject;
     
+    //Rango de posiciones en que se generan los meteoritos
     [Header("POSITIONS")]
     public float minPosX;
     public float maxPosX;
     public float minPosZ;
     public float maxPosZ;
 
+    //Tiempos de la generación de meteoritos
     [Header("TIMES")]
     public float initialLapse;
     public float lapse;
@@ -24,12 +26,15 @@ public class MeteoriteController : MonoBehaviour
 
     private void MeteoriteGeneration()
     {
-        float posX = Random.Range(minPosX, maxPosX);
-        float posZ = Random.Range(minPosZ, maxPosZ);
+        float posX = Random.Range(minPosX, maxPosX); //Posición aleatoria X
+        float posZ = Random.Range(minPosZ, maxPosZ); //Posición aleatoria Z
         
         if (Global.meteorites == true)
         {
-            int n = Random.Range(0, rocks.Length);            
+            //Tipo de meteorito de forma aleatoria 
+            int n = Random.Range(0, rocks.Length);
+
+            //Tipos de meteoritos, posición al generarse, rotación al generarse, dentro de que "Gameobject" se genera
             Instantiate(rocks[n], new Vector3(posX, 25, posZ), rocks[n].transform.rotation, parentObject.transform);
             
             Debug.Log("Meteorite");          

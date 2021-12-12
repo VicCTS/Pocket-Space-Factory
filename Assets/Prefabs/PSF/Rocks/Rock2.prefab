@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6836437140841507495}
   - component: {fileID: 2162972155694757167}
   - component: {fileID: -1320661480657065873}
+  - component: {fileID: 2099771006159736957}
   - component: {fileID: -5062800730693722676}
-  - component: {fileID: -1375208751981575863}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Meteorite
@@ -114,6 +114,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2099771006159736957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5034772784141208434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4b2b0706831bb4ba965d4efbbbac9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 50
+  meteoriteRejectionTime: 0
+  rejectForce: 0
+  minForceX: 0
+  maxForceX: 0
+  minForceY: -25
+  maxForceY: -25
+  minForceZ: 0
+  maxForceZ: 0
 --- !u!114 &-5062800730693722676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,22 +148,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickable: 1
---- !u!114 &-1375208751981575863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5034772784141208434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4b2b0706831bb4ba965d4efbbbac9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 50
-  minForceX: 0
-  maxForceX: 0
-  minForceY: -25
-  maxForceY: -25
-  minForceZ: 0
-  maxForceZ: 0

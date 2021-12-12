@@ -7,7 +7,9 @@ public class Meteorite : MonoBehaviour
     public float magnitude;
     private Rigidbody rb;
     private GameObject meteoriteRejection;
+    private GameObject meteoriteBug;
 
+    //Rango de fuerzas aleatorias de los tres vectores
     [Header("DIRECTION FORCES")]
     public float minForceX;
     public float maxForceX;
@@ -20,7 +22,6 @@ public class Meteorite : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         meteoriteRejection = GameObject.Find("MeteoriteRejection");
-        meteoriteRejection = GameObject.Find("BugMeteoriteDestructor");
     }
 
     private void Start()
@@ -28,22 +29,23 @@ public class Meteorite : MonoBehaviour
         MeteoriteFall();
     }
 
+    //Se genera una fuerza aleatoria al instante de generarse
     public void MeteoriteFall()
     {
-        float forceX = Random.Range(minForceX, maxForceX);
-        float forceY = Random.Range(minForceY, maxForceY);
-        float forceZ = Random.Range(minForceZ, maxForceZ);
+        float forceX = Random.Range(minForceX, maxForceX);  //Fuerza aleatoria del Vector X
+        float forceY = Random.Range(minForceY, maxForceY);  //Fuerza aleatoria del Vector Y
+        float forceZ = Random.Range(minForceZ, maxForceZ);  //Fuerza aleatoria del Vector Z
 
-        Vector3 direction = new Vector3(forceX, forceY, forceZ);
+        Vector3 direction = new Vector3(forceX, forceY, forceZ); //Dirección final de la fuerza
         
-        rb.AddForce(direction * magnitude);
+        rb.AddForce(direction * magnitude); //Fuerza inflingida
     }
 
     private void OnTriggerEnter(Collider rocks)
     {
-        if(rocks.tag == "MeteoriteInteraction")
+        if(rocks.tag == "MeteoriteDetector")
         {
-            meteoriteRejection.GetComponent<MeteoriteRejection>().NoAcces();
+            NoAcces();
         }
 
         if(rocks.tag == "BugMeteoriteDestructor")
@@ -54,9 +56,32 @@ public class Meteorite : MonoBehaviour
 
     private void OnTriggerExit(Collider rocks)
     {
-        if(rocks.tag == "MeteoriteInteraction")
+        if(rocks.tag == "MeteoriteDetector")
         {
-            meteoriteRejection.GetComponent<MeteoriteRejection>().Acces();
+            Acces();
         }
+    }
+
+    //Rotación del meteorito al no poder entrar
+    private void OnCollisionStay(Collision rocks)
+    {
+        if(rocks.gameObject.tag == "MeteoriteRejection")
+        {
+            transform.Rotate(new Vector3(180f, 180f, 180f) * Time.deltaTime);
+            
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        }
+    }
+
+    //Se bloquea el acceso al agujero
+    private void NoAcces()
+    {
+        meteoriteRejection.transform.Translate(0, 400 * Time.deltaTime, 0);
+    }
+
+    //Se desbloquea el acceso al agujero
+    private void Acces()
+    {
+        meteoriteRejection.transform.Translate(0, -400 * Time.deltaTime, 0);
     }
 }

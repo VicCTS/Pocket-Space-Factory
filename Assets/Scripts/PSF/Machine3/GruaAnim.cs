@@ -20,7 +20,7 @@ public class GruaAnim : MonoBehaviour
         if(takingAway == false && secondsLeft > 0)
         {
             TimerTake();
-            anim.SetBool("Grua", true);
+            //anim.SetBool("Grua", true);
         }
     }
 
