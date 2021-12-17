@@ -127,14 +127,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnitude: 50
-  meteoriteRejectionTime: 0
-  rejectForce: 0
-  minForceX: 0
-  maxForceX: 0
+  rejMagnitude: 5
+  minForceX: -5
+  maxForceX: 5
   minForceY: -25
   maxForceY: -25
-  minForceZ: 0
-  maxForceZ: 0
+  minForceZ: -5
+  maxForceZ: 5
+  minRejForceX: 2
+  maxRejForceX: 8
+  minRejForceY: 5
+  maxRejForceY: 15
 --- !u!114 &-5062800730693722676
 MonoBehaviour:
   m_ObjectHideFlags: 0
