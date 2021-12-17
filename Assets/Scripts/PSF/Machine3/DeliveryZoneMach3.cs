@@ -16,7 +16,7 @@ public class DeliveryZoneMach3 : MonoBehaviour
     {
         if(other.tag == "Box1")
         {
-            if(gameManager.actualBoxType==3)
+            if(gameManager.actualBoxType==1)
             {
                 Debug.Log("CajaRoja");
                 Global.score += Global.machine3Score;

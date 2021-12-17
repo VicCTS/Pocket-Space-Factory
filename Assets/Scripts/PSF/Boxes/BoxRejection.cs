@@ -25,6 +25,7 @@ public class BoxRejection : MonoBehaviour
             Debug.Log(gameManager.actualBoxType);
             if (gameManager.actualBoxType == boxType)
             {
+                gameManager.GetComponent<BoxesNeededUI>().SlideRight();
                 Correct();
             } else
             {

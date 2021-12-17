@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     private Machine1 machine1;
     private Machine3 machine3;
     public PlayerController playerController;
+    public GameObject fundido;
 
     private void Awake() 
     {
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         Global.maxTime = 0;
       //  boxGameEnd.SetActive(false);
         LoadLevel(Global.level);
+        
 
         //Provisional
         ShowScoreInfo();
@@ -117,11 +119,14 @@ public class GameManager : MonoBehaviour
        Global.requestBox.Clear();
        if (num == 1) 
        {
-           Debug.Log("PUNTUACIÓMAXIMAAQUESTNIVELL: "+ Global.maxScore);
-           Debug.Log("NIVELLACTUAL: "+ num);
+            
+           
+            Debug.Log("PUNTUACIÓMAXIMAAQUESTNIVELL: "+ Global.maxScore);
+            Debug.Log("NIVELLACTUAL: "+ num);
             Global.requestBox.Add(2);
-            //Global.requestBox.Add(2);
-            //Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
 
             Global.machine1BoxTime = 25;
             Global.machine2BoxTime = 10;
@@ -165,6 +170,7 @@ public class GameManager : MonoBehaviour
        machine2.StartMachine2();
        machine3.StartMachine3();
        isPlaying = true; 
+       StartCoroutine(WaitTimeline());
    }
 
     public void PauseGame()
@@ -296,5 +302,15 @@ public class GameManager : MonoBehaviour
         pauseBox.GetComponent<Animator>().SetInteger("StateBox", 2);
         yield return new WaitForSeconds(waitTimeUnpause);
         unPauseGame();
+    }
+
+    public IEnumerator WaitTimeline()
+    {
+        PauseGame();
+        yield return new WaitForSeconds(34.34f);
+        fundido.SetActive(false);
+        unPauseGame();
+
+
     }
 }
