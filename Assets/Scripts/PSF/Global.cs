@@ -28,5 +28,5 @@ public static class Global
     public static int machine1Score;
     public static int machine2Score;
     public static int machine3Score;
-    public static bool meteorites = true;
+    public static bool meteorites;
 }

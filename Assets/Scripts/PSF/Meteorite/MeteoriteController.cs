@@ -22,6 +22,13 @@ public class MeteoriteController : MonoBehaviour
     private void Start()
     {      
         InvokeRepeating("MeteoriteGeneration", initialLapse, lapse);
+        StartCoroutine("Meteorites");
+    }
+
+    private IEnumerator Meteorites()
+    {
+        yield return new WaitForSeconds(35);
+        Global.meteorites = true;
     }
 
     private void MeteoriteGeneration()
