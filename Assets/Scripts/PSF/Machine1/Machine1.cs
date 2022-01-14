@@ -9,6 +9,9 @@ public class Machine1 : MonoBehaviour
     public GameObject boxesAcc;         //Cajas acumuladas.
     public GameObject timeNextBox;      //Tiempo de aparicion de las cajas.
     public Image timeBar;               //Game Object de la barra que se vacia.
+    public GameObject luzEncendidaM1;
+    public AudioClip alertaClip;
+    public AudioSource alertaSound;
 
     [Header("Time")]
     public float totalTime;               //Tiempo en segundos con cuenta regresiva para la siguiente caja.
@@ -24,7 +27,8 @@ public class Machine1 : MonoBehaviour
 
     private float nextTime;             //Variable auxiliar.
     private float pauseTime;            //Sirve para regular el temporizador por segundos.
-    private bool wait;                  //Sirve para controlar el timer segun el tiempo de animacion.
+    private bool wait; 
+    public bool waitCoroutine = true;                 //Sirve para controlar el timer segun el tiempo de animacion.
     private GameManager gameManager; 
     private float timePercent           //Variable que realiza una funcion. Convierte el tiempo que queda en un porcentaje.
     {
@@ -35,7 +39,8 @@ public class Machine1 : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         isWorking = false;  
-        Global.machine1BoxTime = 6;  
+        Global.machine1BoxTime = 6;
+        luzEncendidaM1.SetActive(false);  
     }
 
     public void StartMachine1() 
@@ -67,7 +72,7 @@ public class Machine1 : MonoBehaviour
 
     public void UpdateTextInfo()
     { 
-       boxesAcc.GetComponent<Text>().text  = accumulatedBoxes.ToString();
+      boxesAcc.GetComponent<Text>().text  = accumulatedBoxes.ToString() + "/" + accumulatedBoxesLimt.ToString();
        timeNextBox.GetComponent<Text>().text  = totalTime.ToString();
     }
 
@@ -83,6 +88,11 @@ public class Machine1 : MonoBehaviour
 
                 //ACTION
                 ActionMachine1();
+            }
+
+            if(accumulatedBoxes == accumulatedBoxesLimt-1)
+            {
+                AlertaRoja();
             }
         }  
     }
@@ -112,6 +122,25 @@ public class Machine1 : MonoBehaviour
             gameManager.ShowGameOver();
             gameManager.PauseGame();
         }
+    }
+    private void AlertaRoja()
+    {
+        if(waitCoroutine == true)
+        {
+          waitCoroutine = false;
+          StartCoroutine(LuzAlerta());  
+        }
+        
+        
+        alertaSound.PlayOneShot(alertaClip, 1);
+    }
+    IEnumerator LuzAlerta()
+    {
+        luzEncendidaM1.SetActive(true);
+        yield return new WaitForSeconds(1);
+        luzEncendidaM1.SetActive(false);
+        yield return new WaitForSeconds(1);
+        waitCoroutine = true;
     }
 
     public void SpawnBox()
