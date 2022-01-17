@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public GameObject fundido;
 
+    [Header("Timeline Assets")]
+    public GameObject boxAnim1;
+    public GameObject boxAnim2;
+    public GameObject boxAnim3;
+    public GameObject timeline;
+
     private void Awake() 
     {
         machine2 = GetComponent<Machine2>();
@@ -52,7 +58,12 @@ public class GameManager : MonoBehaviour
     {
         Global.score = 0;
         Global.maxTime = 0;
-      //  boxGameEnd.SetActive(false);
+      //boxGameEnd.SetActive(false);
+
+        boxAnim1 = GameObject.Find("BlueBox");
+        boxAnim2 = GameObject.Find("RedBox");
+        boxAnim3 = GameObject.Find("YellowBox");
+
         LoadLevel(Global.level);
         
 
@@ -117,20 +128,437 @@ public class GameManager : MonoBehaviour
        // 3 - blue box
 
        Global.requestBox.Clear();
-       if (num == 1) 
-       {
-            
-           
+        switch (num)
+        {
+           case 1:
+
             Debug.Log("PUNTUACIÓMAXIMAAQUESTNIVELL: "+ Global.maxScore);
             Debug.Log("NIVELLACTUAL: "+ num);
+
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+
+            Global.machine1BoxTime = 20;
+            Global.machine2BoxTime = 20;
+            Global.machine3BoxTime = 20;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 2:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 25;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 25;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 3:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            
+            Global.machine1BoxTime = 25;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 25;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 4:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 25;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 25;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 5:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+                       
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 30;
+            Global.machine3BoxTime = 30;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 6:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 30;
+            Global.machine3BoxTime = 30;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;       
+
+            case 7:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+           
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 30;
+            Global.machine3BoxTime = 30;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 8:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 28;
+            Global.machine3BoxTime = 32;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 9:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 35;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 23;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 10:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 23;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 11:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 26;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 12:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            //TO DO
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 26;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 13:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 26;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 14:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 26;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 15:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 25;
+            Global.machine3BoxTime = 26;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+            
+            break;
+
+            case 16:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 35;
+            Global.machine2BoxTime = 29;
+            Global.machine3BoxTime = 32;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 17:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            
+            Global.machine1BoxTime = 34;
+            Global.machine2BoxTime = 31;
+            Global.machine3BoxTime = 32;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            case 18:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-
-            Global.machine1BoxTime = 25;
-            Global.machine2BoxTime = 10;
-            Global.machine3BoxTime = 15;
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 29;
+            Global.machine2BoxTime = 32;
+            Global.machine3BoxTime = 35;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -138,18 +566,26 @@ public class GameManager : MonoBehaviour
             Global.machine1Score = 10000;
             Global.machine2Score = 15000;
             Global.machine3Score = 20000;
-        }
-        if (num == 2)
-        {
+
+            break;
+
+            case 19:
+
             Debug.Log("NIVELLACTUAL: "+ num);
-            //TO DO
+            
             Global.requestBox.Add(3);
-         //   Global.requestBox.Add(2);
-         //   Global.requestBox.Add(2);
-
-            Global.machine1BoxTime = 25;
-            Global.machine2BoxTime = 10;
-            Global.machine3BoxTime = 15;
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            
+            Global.machine1BoxTime = 36;
+            Global.machine2BoxTime = 31;
+            Global.machine3BoxTime = 22;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -157,21 +593,60 @@ public class GameManager : MonoBehaviour
             Global.machine1Score = 10000;
             Global.machine2Score = 15000;
             Global.machine3Score = 20000;
-        }
+
+            break;
+
+            case 20:
+
+            Debug.Log("NIVELLACTUAL: "+ num);
+            
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(2);
+            
+            Global.machine1BoxTime = 26;
+            Global.machine2BoxTime = 31;
+            Global.machine3BoxTime = 36;
+            Global.machine1accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine1BoxFirstTime = 6;
+            Global.machine1Score = 10000;
+            Global.machine2Score = 15000;
+            Global.machine3Score = 20000;
+
+            break;
+
+            default:
+               break;   
+       }
        actualBox = 0;
        totalBoxes = Global.requestBox.Count;
        actualBoxType = Global.requestBox[actualBox];
        actualLevel = num;
-   } 
+    } 
 
-   private void StrtGame()
-   {
-       machine1.StartMachine1();
-       machine2.StartMachine2();
-       machine3.StartMachine3();
-       isPlaying = true; 
-       StartCoroutine(WaitTimeline());
-   }
+    private void StrtGame()
+    {
+        machine1.StartMachine1();
+        machine2.StartMachine2();
+        machine3.StartMachine3();
+        
+        isPlaying = true; 
+        if(Global.level == 1){
+            StartCoroutine(WaitTimeline());
+        }
+        if(Global.level != 1){
+            DesactivarCinematica();
+        }
+    }
 
     public void PauseGame()
     {
@@ -271,9 +746,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel(){
-        LoadLevel(Global.level);      
+        LoadLevel(Global.level);  
         ShowScoreInfo();
-        StrtGame();
         PlayGame();
     }
 
@@ -312,5 +786,13 @@ public class GameManager : MonoBehaviour
         unPauseGame();
 
 
+    }
+
+    public void DesactivarCinematica()
+    {
+        boxAnim1.SetActive(false);
+        boxAnim2.SetActive(false);
+        boxAnim3.SetActive(false);
+        timeline.SetActive(false);
     }
 }
