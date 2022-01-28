@@ -31,10 +31,11 @@ public class BoxesNeededUI : MonoBehaviour
     }
 
     public void FillNeededBoxesLayout(int i){
-        //Selecciona la imatge necessaria depenent de laposicio en la llista de cada nivell
+        //Selecciona la imatge necessaria depenent de la posicio en la llista de cada nivell
         if(i==0){
             boxNeededIcon1.sprite = SelectBox(listPosition);
             position1.text = listPosition+1 +"";
+            //Mira si la box ja s'ha entregat y la posa amb l'alfa a la meitat
             if(gameManager.actualBox > listPosition){
                 var tempColor = boxNeededIcon1.color;
                 tempColor.a = 0.5f;
@@ -47,8 +48,8 @@ public class BoxesNeededUI : MonoBehaviour
             }
         }else if(i==1){
             boxNeededIcon2.sprite = SelectBox(listPosition + 1);
-            position2.text = listPosition+1 + 1 +"";
-           if(gameManager.actualBox > listPosition+1){
+            position2.text = listPosition+2 +"";
+           if(gameManager.actualBox > (listPosition+1)){
                 var tempColor = boxNeededIcon2.color;
                 tempColor.a = 0.5f;
                 boxNeededIcon2.color = tempColor;
@@ -59,8 +60,8 @@ public class BoxesNeededUI : MonoBehaviour
             }
         }else if(i==2){
             boxNeededIcon3.sprite = SelectBox(listPosition + 2);
-            position3.text = listPosition+1 + 2 +"";
-            if(gameManager.actualBox > listPosition+2){
+            position3.text = listPosition+3 +"";
+            if(gameManager.actualBox > (listPosition+2)){
                 var tempColor = boxNeededIcon3.color;
                 tempColor.a = 0.5f;
                 boxNeededIcon3.color = tempColor;

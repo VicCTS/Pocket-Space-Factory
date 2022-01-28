@@ -14,16 +14,17 @@ public class DeliveryZoneMach1 : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        Debug.Log("CajaAzul");
+        
         if(other.tag == "Box3")
         {
-            Debug.Log("CajaAzul");
+            
             if(gameManager.actualBoxType==3)
             {
-                Debug.Log("CajaAzul");
+                
                 Global.score += Global.machine1Score;
                 gameManager.ShowScoreInfo();
                 gameManager.UpdateBox();
+                gameManager.GetComponent<BoxesNeededUI>().SlideRight();
 
             }
             

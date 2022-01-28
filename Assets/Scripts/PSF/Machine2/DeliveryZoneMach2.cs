@@ -18,10 +18,10 @@ public class DeliveryZoneMach2 : MonoBehaviour
         {
             if(gameManager.actualBoxType==2)
             {
-                Debug.Log("CajaAmarilla");
                 Global.score += Global.machine2Score;
                 gameManager.ShowScoreInfo();
                 gameManager.UpdateBox();
+                gameManager.GetComponent<BoxesNeededUI>().SlideRight();
             }
             
         }

@@ -641,7 +641,11 @@ public class GameManager : MonoBehaviour
         
         isPlaying = true; 
         if(Global.level == 1){
+            if(PlayerPrefs.GetInt("CinematicaReproducida", 0) == 0){
             StartCoroutine(WaitTimeline());
+            }else{
+                DesactivarCinematica();
+            }
         }
         if(Global.level != 1){
             DesactivarCinematica();
@@ -783,6 +787,7 @@ public class GameManager : MonoBehaviour
         PauseGame();
         yield return new WaitForSeconds(34.34f);
         fundido.SetActive(false);
+        PlayerPrefs.SetInt("CinematicaReproducida", 1);
         unPauseGame();
 
 
@@ -794,5 +799,6 @@ public class GameManager : MonoBehaviour
         boxAnim2.SetActive(false);
         boxAnim3.SetActive(false);
         timeline.SetActive(false);
+        fundido.SetActive(false);
     }
 }

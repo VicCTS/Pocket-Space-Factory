@@ -22,10 +22,10 @@ public class BoxRejection : MonoBehaviour
     {
         if (box.gameObject.tag == "BoxRejection")
         {
-            Debug.Log(gameManager.actualBoxType);
+            
             if (gameManager.actualBoxType == boxType)
             {
-                gameManager.GetComponent<BoxesNeededUI>().SlideRight();
+                
                 Correct();
             } else
             {
