@@ -22,6 +22,7 @@ public class Machine3 : MonoBehaviour
     public Transform spawnPosition;     //Punto de aparicion de las cajas.
     public GameObject parentObject;     //GameObject que ser� el padre de todas las cajas para que quede ordenado.
     public bool isWorking;              //Determina si la maquina 2 esta en funcionamiento
+    public bool powerUpActived;         //Determina si la maquina 2 esta en funcionamiento en los Power Ups    
     public int accumulatedBoxes;        //Cajas acumuladas en ESTE MOMENTO;
     public int accumulatedBoxesLimt;    //Limite de cajas que puedo cumular en la maquina.
 
@@ -41,9 +42,9 @@ public class Machine3 : MonoBehaviour
      private void Awake() 
     {
         gameManager = GetComponent<GameManager>();
-        isWorking = false; 
-        luzEncendidaM3.SetActive(false);    
-           
+        isWorking = false;  
+        powerUpActived = false;   
+        luzEncendidaM3.SetActive(false); 
     }
 
     public void StartMachine3() 
@@ -54,6 +55,8 @@ public class Machine3 : MonoBehaviour
         accumulatedBoxesLimt = Global.machine3accumulatedBoxesLimit;
         UpdateTextInfo();
         PlayMachine3();
+        PlayMachine3PowerUp();
+
     }
 
     public void ConfigureMachine3()
@@ -73,6 +76,18 @@ public class Machine3 : MonoBehaviour
     {
         isWorking = true;
     }
+    
+    public void PlayMachine3PowerUp()
+    {
+        powerUpActived = false;
+
+    }
+    
+    public void PauseMachine3PowerUp()
+    {
+        powerUpActived = true;
+
+    }
 
     public void UpdateTextInfo()
     { 
@@ -83,17 +98,23 @@ public class Machine3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        accumulatedBoxesLimt = Global.machine3accumulatedBoxesLimit;
+
         if (isWorking == true)
         {    
-            if (Time.time > nextTime)
+            if(powerUpActived == false)
             {
-                // Define el proximo accion desntro de 1 segundo
-                nextTime = Time.time + pauseTime;
+                if (Time.time > nextTime)
+                {
+                    // Define el proximo accion desntro de 1 segundo
+                    nextTime = Time.time + pauseTime;
 
-                //ACTION
-                ActionMachine3();
-                Animation();
+                    //ACTION
+                    ActionMachine3();
+                    Animation();
+                }
             }
+
             if(accumulatedBoxes == accumulatedBoxesLimt-1)
             {
                 AlertaRoja();
@@ -114,7 +135,7 @@ public class Machine3 : MonoBehaviour
                 if (wait == true)
                 {
                     SpawnBox();
-                    totalTime = Global.machine2BoxTime;
+                    totalTime = Global.machine3BoxTime;
                 }
             }
             wait = false;
@@ -128,17 +149,6 @@ public class Machine3 : MonoBehaviour
             gameManager.PauseGame();
         }
     }
-    private void AlertaRoja()
-    {
-        if(waitCoroutine == true)
-        {
-          waitCoroutine = false;
-          StartCoroutine(LuzAlerta());  
-        }
-        
-        
-        alertaSound.PlayOneShot(alertaClip, 1);
-    }
 
     IEnumerator WaitAnim()
     {
@@ -147,14 +157,6 @@ public class Machine3 : MonoBehaviour
         anim.SetBool("GruaOn", false);
         yield return new WaitForSeconds(4);
         boxSpawned = true;
-    }
-    IEnumerator LuzAlerta()
-    {
-        luzEncendidaM3.SetActive(true);
-        yield return new WaitForSeconds(1);
-        luzEncendidaM3.SetActive(false);
-        yield return new WaitForSeconds(1);
-        waitCoroutine = true;
     }
 
     public void SpawnBox()
@@ -180,5 +182,26 @@ public class Machine3 : MonoBehaviour
                 boxSpawned = false;
             }
         }
+    }
+
+    private void AlertaRoja()
+    {
+        if(waitCoroutine == true)
+        {
+          waitCoroutine = false;
+          StartCoroutine(LuzAlerta());  
+        }
+        
+        
+        alertaSound.PlayOneShot(alertaClip, 1);
+    }
+
+    IEnumerator LuzAlerta()
+    {
+        luzEncendidaM3.SetActive(true);
+        yield return new WaitForSeconds(1);
+        luzEncendidaM3.SetActive(false);
+        yield return new WaitForSeconds(1);
+        waitCoroutine = true;
     }
 }

@@ -21,13 +21,14 @@ public class Machine1 : MonoBehaviour
     public GameObject box;              //Objeto a instanciar.
     public Transform spawnPosition;     //Punto de aparicion de las cajas.
     public GameObject parentObject;     //GameObject que ser� el padre de todas las cajas para que quede ordenado.
-    public bool isWorking;              //Determina si la maquina 1 esta en funcionamiento
+    public bool isWorking;   
+    public bool powerUpActived;           //Determina si la maquina 1 esta en funcionamiento
     public int accumulatedBoxes;        //Cajas acumuladas en ESTE MOMENTO;
     public int accumulatedBoxesLimt;    //Limite de cajas que puedo cumular en la maquina.
 
     private float nextTime;             //Variable auxiliar.
     private float pauseTime;            //Sirve para regular el temporizador por segundos.
-    private bool wait; 
+    private bool wait;                  //Sirve para controlar el timer segun el tiempo de animacion.
     public bool waitCoroutine = true;                 //Sirve para controlar el timer segun el tiempo de animacion.
     private GameManager gameManager; 
     private float timePercent           //Variable que realiza una funcion. Convierte el tiempo que queda en un porcentaje.
@@ -39,8 +40,9 @@ public class Machine1 : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         isWorking = false;  
-        Global.machine1BoxTime = 6;
-        luzEncendidaM1.SetActive(false);  
+        Global.machine1BoxTime = 6;  
+        powerUpActived = false;
+        luzEncendidaM1.SetActive(false);
     }
 
     public void StartMachine1() 
@@ -51,6 +53,7 @@ public class Machine1 : MonoBehaviour
         accumulatedBoxesLimt = Global.machine1accumulatedBoxesLimit;
         UpdateTextInfo();
         PlayMachine1();
+        PlayMachine1PowerUp();
     }
 
     public void ConfigureMachine1()
@@ -70,24 +73,39 @@ public class Machine1 : MonoBehaviour
         isWorking = true;
     }
 
+    public void PlayMachine1PowerUp()
+    {
+        powerUpActived = false;
+    }
+
+     public void PauseMachine1PowerUp()
+    {
+        powerUpActived = true;
+    }
+
     public void UpdateTextInfo()
     { 
-      boxesAcc.GetComponent<Text>().text  = accumulatedBoxes.ToString() + "/" + accumulatedBoxesLimt.ToString();
+       boxesAcc.GetComponent<Text>().text  = accumulatedBoxes.ToString() + "/" + accumulatedBoxesLimt.ToString();
        timeNextBox.GetComponent<Text>().text  = totalTime.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isWorking == true)
-        {    
-            if (Time.time > nextTime)
-            {
-                // Define el proximo accion desntro de 1 segundo
-                nextTime = Time.time + pauseTime;
+        accumulatedBoxesLimt = Global.machine1accumulatedBoxesLimit;
 
-                //ACTION
-                ActionMachine1();
+        if (isWorking == true)
+        {   
+            if(powerUpActived == false)
+            { 
+                if (Time.time > nextTime)
+                {
+                    // Define el proximo accion desntro de 1 segundo
+                    nextTime = Time.time + pauseTime;
+
+                    //ACTION
+                    ActionMachine1();
+                }
             }
 
             if(accumulatedBoxes == accumulatedBoxesLimt-1)
@@ -123,6 +141,7 @@ public class Machine1 : MonoBehaviour
             gameManager.PauseGame();
         }
     }
+
     private void AlertaRoja()
     {
         if(waitCoroutine == true)
@@ -134,6 +153,7 @@ public class Machine1 : MonoBehaviour
         
         alertaSound.PlayOneShot(alertaClip, 1);
     }
+
     IEnumerator LuzAlerta()
     {
         luzEncendidaM1.SetActive(true);

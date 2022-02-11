@@ -15,19 +15,20 @@ public class Machine2 : MonoBehaviour
 
     [Header("Time")]
     public int totalTime;               //Tiempo en segundos con cuenta regresiva para la siguiente caja.
-    public float animTime = 4;              //Tiempo que se espera el timer y la caja en aparecer(Poner tiempo necesario para animacion).
+    public float animTime = 4;          //Tiempo que se espera el timer y la caja en aparecer(Poner tiempo necesario para animacion).
 
     [Header("State")]
     public GameObject box;              //Objeto a instanciar.
     public Transform spawnPosition;     //Punto de aparicion de las cajas.
     public GameObject parentObject;     //GameObject que ser� el padre de todas las cajas para que quede ordenado.
     public bool isWorking;              //Determina si la maquina 2 esta en funcionamiento
+    public bool powerUpActived;         //Determina si la maquina 2 esta en funcionamiento en los Power Ups
     public int accumulatedBoxes;        //Cajas acumuladas en ESTE MOMENTO;
     public int accumulatedBoxesLimt;    //Limite de cajas que puedo cumular en la maquina.
 
     private float nextTime;             //Variable auxiliar.
     private float pauseTime;            //Sirve para regular el temporizador por segundos.
-    public bool wait;                  //Sirve para controlar el timer segun el tiempo de animacion.
+    public bool wait;                   //Sirve para controlar el timer segun el tiempo de animacion.
     public bool boxSpawned;
     public bool waitCoroutine = true;
     private GameManager gameManager;
@@ -41,7 +42,8 @@ public class Machine2 : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         isWorking = false; 
-        luzEncendidaM2.SetActive(false);      
+        powerUpActived = false;  
+        luzEncendidaM2.SetActive(false);  
     }
 
     public void StartMachine2() 
@@ -52,6 +54,7 @@ public class Machine2 : MonoBehaviour
         accumulatedBoxesLimt = Global.machine2accumulatedBoxesLimit;
         UpdateTextInfo();
         PlayMachine2();
+        PlayMachine2PowerUp();
     }
 
     public void ConfigureMachine2()
@@ -72,6 +75,16 @@ public class Machine2 : MonoBehaviour
         isWorking = true;
     }
 
+    public void PlayMachine2PowerUp()
+    {
+        powerUpActived = false;
+    }
+    
+    public void PauseMachine2PowerUp()
+    {
+        powerUpActived = true;
+    }
+
     public void UpdateTextInfo()
     { 
        boxesAcc.GetComponent<Text>().text  = accumulatedBoxes.ToString() + "/" + accumulatedBoxesLimt.ToString();
@@ -81,16 +94,21 @@ public class Machine2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isWorking == true)
-        {    
-            if (Time.time > nextTime)
-            {
-                // Define el proximo accion desntro de 1 segundo
-                nextTime = Time.time + pauseTime;
+        accumulatedBoxesLimt = Global.machine2accumulatedBoxesLimit;
 
-                //ACTION
-                ActionMachine2();
-                Animation();
+        if (isWorking == true )
+        {    
+            if(powerUpActived == false)
+            { 
+                if (Time.time > nextTime)
+                {
+                    // Define el proximo accion desntro de 1 segundo
+                    nextTime = Time.time + pauseTime;
+
+                    //ACTION
+                    ActionMachine2();
+                    Animation();
+                }
             }
 
             if(accumulatedBoxes == accumulatedBoxesLimt-1)
@@ -132,6 +150,15 @@ public class Machine2 : MonoBehaviour
         }      
     }
 
+    IEnumerator WaitAnim()
+    {
+        yield return new WaitForSeconds(2);
+        wait = true;
+        anim.SetBool("Landing", false);
+        yield return new WaitForSeconds(2);
+        boxSpawned = true;
+    }
+
     private void AlertaRoja()
     {
         if(waitCoroutine == true)
@@ -142,15 +169,6 @@ public class Machine2 : MonoBehaviour
         
         
         alertaSound.PlayOneShot(alertaClip, 1);
-    }
-
-    IEnumerator WaitAnim()
-    {
-        yield return new WaitForSeconds(2);
-        wait = true;
-        anim.SetBool("Landing", false);
-        yield return new WaitForSeconds(2);
-        boxSpawned = true;
     }
 
     IEnumerator LuzAlerta()

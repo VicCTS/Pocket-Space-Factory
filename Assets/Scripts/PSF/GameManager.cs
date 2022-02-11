@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 
     private SFXManager sfxManager;
     private Music soundManager;
-    private Machine2 machine2;
-    private Machine1 machine1;
-    private Machine3 machine3;
+    public Machine2 machine2;
+    public Machine1 machine1;
+    public Machine3 machine3;
     public PlayerController playerController;
     public GameObject fundido;
 
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() 
     {
-        Global.score = 0;
+        Global.score = 1000000000;
         Global.maxTime = 0;
       //boxGameEnd.SetActive(false);
 

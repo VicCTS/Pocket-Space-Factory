@@ -10,7 +10,7 @@ public static class Global
     public static bool isPlayingMusic;
 
     //Game
-    public static int score;
+    public static int score = 0;
     public static int maxScore = 0;
     public static int level = 1;
     public static int maxLevel = 0;
@@ -28,5 +28,16 @@ public static class Global
     public static int machine1Score;
     public static int machine2Score;
     public static int machine3Score;
-    public static bool meteorites;
+    public static bool meteorites = true;
+
+
+
+    public static int priceSpeedBoost = 450 ;
+    public static int priceStopMachineBoost = 600 ;
+    public static int priceClearMeteoBoost = 1000 ;
+    public static int priceCapsuleBoost = 1250 ;
+    public static int priceX2CoinsBoost = 1000 ;
+    public static int priceMaxBoxsBoost = 1500 ;
+
+
 }
