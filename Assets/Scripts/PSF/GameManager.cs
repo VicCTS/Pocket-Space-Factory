@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 
 public class GameManager : MonoBehaviour
@@ -726,6 +727,7 @@ public class GameManager : MonoBehaviour
     {
         PauseGame();
         boxGameEnd.GetComponent<Animator>().SetInteger("StateBox", 1);
+        Analytics.CustomEvent("Finished Game");
     }
 
     //BUTTONS
