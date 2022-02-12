@@ -23,6 +23,11 @@ public class MenuManager : MonoBehaviour
     public GameObject privacyPolicyBox;
     public GameObject termsOfServiceBox;
     public GameObject statisticsBox;
+    public GameObject audioOn;
+    public GameObject audioOff;
+    public GameObject sfxOn;
+    public GameObject sfxOff;
+    
 
     private Animator anim;
 
@@ -38,7 +43,8 @@ public class MenuManager : MonoBehaviour
         {
             AudioOn();
         }*/
-        AudioOn();
+        CargarOpcionesAudio();
+        InitialAudioControl();
     }
 
     //AUDIO
@@ -47,12 +53,28 @@ public class MenuManager : MonoBehaviour
         if (Global.canAudioPlay == true)
         {
            Global.canAudioPlay = false;
+           PlayerPrefs.SetInt("audioControl", 0);
            AudioOff();
            Debug.Log("SOUND_OFF");
         } else 
         {
            Global.canAudioPlay = true;
+           PlayerPrefs.SetInt("audioControl", 1);
            AudioOn();
+           Debug.Log("SOUND_ON");
+        }
+
+    }
+
+    public void InitialAudioControl()
+    {
+        if (Global.canAudioPlay == true)
+        {
+           AudioOn();
+           Debug.Log("SOUND_OFF");
+        } else 
+        {
+           AudioOff();
            Debug.Log("SOUND_ON");
         }
     }
@@ -62,10 +84,12 @@ public class MenuManager : MonoBehaviour
         if (Global.canSFXPlay == true)
         {
            Global.canSFXPlay = false;
+            PlayerPrefs.SetInt("SFXControl", 0);
            Debug.Log("SFX_OFF");
         } else 
         {
            Global.canSFXPlay = true;
+            PlayerPrefs.SetInt("SFXControl", 1);
            Debug.Log("SFX_ON");
         }
     }
@@ -163,6 +187,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
+        Global.initialTime = Time.time;
         SceneManager.LoadScene("PSF");
     }
 
@@ -174,6 +199,28 @@ public class MenuManager : MonoBehaviour
     public void OpenURL(string url)
     {
         Application.OpenURL(url);
+    }
+
+    private void CargarOpcionesAudio(){
+        if(PlayerPrefs.GetInt("audioControl")==0){
+            AudioOff();
+            audioOff.SetActive (true);
+            audioOn.SetActive (false);
+        }else if(PlayerPrefs.GetInt("audioControl")==1){
+            AudioOn();
+            audioOn.SetActive (true);
+            audioOff.SetActive (false);
+        }
+
+        if(PlayerPrefs.GetInt("SFXControl")==0){
+            Global.canSFXPlay = false;
+            sfxOff.SetActive (true);
+            sfxOn.SetActive (false);
+        }else if(PlayerPrefs.GetInt("SFXControl")==1){
+            Global.canSFXPlay = true;
+            sfxOn.SetActive (true);
+            sfxOff.SetActive (false);
+        }
     }
 
 }

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() 
     {
-        Global.score = 1000000000;
+        Global.score = 0;
         Global.maxTime = 0;
       //boxGameEnd.SetActive(false);
 
@@ -660,6 +660,7 @@ public class GameManager : MonoBehaviour
         machine1.PauseMachine1();
         machine3.PauseMachine3();
         isPlaying = false;
+        Global.meteorites = false;
     }
 
     private void unPauseGame()
@@ -669,6 +670,7 @@ public class GameManager : MonoBehaviour
         machine1.PlayMachine1();
         machine3.PlayMachine3();
         isPlaying = true;
+        Global.meteorites = true;
     }
 
     public void UpdateBox()
@@ -682,22 +684,45 @@ public class GameManager : MonoBehaviour
         {
             if( Global.level < Global.maxLevelPublished){
             Debug.Log("victory");
-           /*  ScoreFinal(); //Suma punts Work in progres
-            if(Global.maxScore < Global.score){
-                Global.maxScore = Global.score; 
-                Debug.Log("HAS SUPERAT EL TEU RECORD: "+ Global.maxScore);
-            } */
+            ScoreFinal(); //Suma punts Work in progres
+
+                if(Global.maxScore < Global.score){
+                        Global.maxScore = Global.score; 
+                        Debug.Log("HAS SUPERAT EL TEU RECORD: "+ Global.maxScore);
+                        PlayerPrefs.SetInt("maxScore",Global.maxScore);
+                        Global.finalTime = Time.time;
+                        PlayerPrefs.SetFloat("totalTime",(PlayerPrefs.GetFloat("totalTime",0) + (Global.finalTime - Global.initialTime)));
+                        Global.initialTime = Time.time;
+                } 
+
             ShowLevelCompleted();
+
                 if(Global.maxLevel < Global.level){
                     Global.maxLevel = Global.level;
                     Debug.Log("Max Level POSTWIN: " + Global.maxLevel);
+
+                    if(PlayerPrefs.GetInt("maxLevel", 0) < Global.maxLevel){
+                        PlayerPrefs.SetInt("maxLevel", Global.maxLevel);
+                    }
+
+                    Global.finalTime = Time.time;
+                    PlayerPrefs.SetFloat("totalTime",(PlayerPrefs.GetFloat("totalTime",0) + (Global.finalTime - Global.initialTime)));
+                    Global.initialTime = Time.time;
                 }
-            Global.level ++;
+
+                Global.level ++;
             } else{
                 Debug.Log("victoryEPICA");
                 ShowGameCompleted();
+                Global.finalTime = Time.time;
+                PlayerPrefs.SetFloat("totalTime",(PlayerPrefs.GetFloat("totalTime",0) + (Global.finalTime - Global.initialTime)));
+
                 if(Global.maxLevel < Global.level){
                     Global.maxLevel = Global.level;
+
+                    if(PlayerPrefs.GetInt("maxLevel", 0) < Global.maxLevel){
+                        PlayerPrefs.SetInt("maxLevel", Global.maxLevel);
+                    }
                 }
             }
         }
@@ -712,6 +737,8 @@ public class GameManager : MonoBehaviour
     {
         boxLevelFail.GetComponent<Animator>().SetInteger("StateBox", 1);
         soundManager.PlayGameOverSoundtrack();
+        Global.maxLevel = Global.level;
+        PlayerPrefs.SetFloat("totalTime",(PlayerPrefs.GetFloat("totalTime",0) + (Global.finalTime - Global.initialTime)));
         PauseGame();
     }
 
