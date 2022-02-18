@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3250985719116027623}
   - component: {fileID: -8183437587254056494}
   - component: {fileID: -1284359791670686730}
+  - component: {fileID: 4027963632087101506}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Meteorite
@@ -151,3 +152,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickable: 1
+--- !u!114 &4027963632087101506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389549964773028303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53baadc384a6da44fa80e17c36df117d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteor:
+  - {fileID: 8300000, guid: 05e8ed3db637eeb4481f86f287db3f93, type: 3}
+  - {fileID: 8300000, guid: ae129572e7993c4448f2b0b37b86ff23, type: 3}
