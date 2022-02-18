@@ -193,7 +193,11 @@ public class Machine3 : MonoBehaviour
         }
         
         
-        alertaSound.PlayOneShot(alertaClip, 1);
+        if(Global.canSFXPlay == true)
+        {
+           alertaSound.PlayOneShot(alertaClip, 1);
+        }
+        
     }
 
     IEnumerator LuzAlerta()

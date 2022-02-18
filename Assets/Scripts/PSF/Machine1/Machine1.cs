@@ -150,8 +150,12 @@ public class Machine1 : MonoBehaviour
           StartCoroutine(LuzAlerta());  
         }
         
-        
-        alertaSound.PlayOneShot(alertaClip, 1);
+
+        if(Global.canSFXPlay == true)
+        {
+          alertaSound.PlayOneShot(alertaClip, 1);
+
+        }  
     }
 
     IEnumerator LuzAlerta()

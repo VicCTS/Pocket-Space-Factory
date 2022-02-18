@@ -202,21 +202,21 @@ public class MenuManager : MonoBehaviour
     }
 
     private void CargarOpcionesAudio(){
-        if(PlayerPrefs.GetInt("audioControl")==0){
+        if(PlayerPrefs.GetInt("audioControl", 1)==0){
             AudioOff();
             audioOff.SetActive (true);
             audioOn.SetActive (false);
-        }else if(PlayerPrefs.GetInt("audioControl")==1){
+        }else if(PlayerPrefs.GetInt("audioControl", 1)==1){
             AudioOn();
             audioOn.SetActive (true);
             audioOff.SetActive (false);
         }
 
-        if(PlayerPrefs.GetInt("SFXControl")==0){
+        if(PlayerPrefs.GetInt("SFXControl",1)==0){
             Global.canSFXPlay = false;
             sfxOff.SetActive (true);
             sfxOn.SetActive (false);
-        }else if(PlayerPrefs.GetInt("SFXControl")==1){
+        }else if(PlayerPrefs.GetInt("SFXControl", 1)==1){
             Global.canSFXPlay = true;
             sfxOn.SetActive (true);
             sfxOff.SetActive (false);
