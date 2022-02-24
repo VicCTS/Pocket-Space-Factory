@@ -12,6 +12,7 @@ public class Machine3 : MonoBehaviour
     public GameObject luzEncendidaM3;
     public AudioClip alertaClip;
     public AudioSource alertaSound;
+    private bool alertSoundBool = true;
 
     [Header("Time")]
     public int totalTime;               //Tiempo en segundos con cuenta regresiva para la siguiente caja.
@@ -119,6 +120,10 @@ public class Machine3 : MonoBehaviour
             {
                 AlertaRoja();
             }
+            else
+            {
+                alertSoundBool = true;
+            }
         }  
     }
 
@@ -193,9 +198,10 @@ public class Machine3 : MonoBehaviour
         }
         
         
-        if(Global.canSFXPlay == true)
+        if(Global.canSFXPlay == true && alertSoundBool)
         {
            alertaSound.PlayOneShot(alertaClip, 1);
+           alertSoundBool = false;
         }
         
     }
