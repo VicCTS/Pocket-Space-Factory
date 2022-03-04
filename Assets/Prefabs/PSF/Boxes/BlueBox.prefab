@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5770212094973599873}
   - component: {fileID: 5779752708475841247}
   - component: {fileID: -7302179945426377161}
+  - component: {fileID: -1021542326273617682}
   m_Layer: 0
   m_Name: BlueBox
   m_TagString: Box3
@@ -80,7 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructionTime: 1
   coins: {fileID: 0}
-  CajaSFX: {fileID: 8300000, guid: c93a85c36bdd82741a48d84f53048904, type: 3}
 --- !u!114 &-5770212094973599873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +206,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1021542326273617682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937502167711224989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3d6d5f61aa7f2468b069feb8d65292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CajaSFX: {fileID: 8300000, guid: c93a85c36bdd82741a48d84f53048904, type: 3}
 --- !u!1 &7062795637885692553
 GameObject:
   m_ObjectHideFlags: 0

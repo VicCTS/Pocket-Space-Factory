@@ -62,7 +62,7 @@ public class Meteorite : MonoBehaviour
 
         if(rocks.tag == "BugMeteoriteDestructor")
         {
-            Destroy(gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 

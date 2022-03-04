@@ -42,7 +42,14 @@ public class MeteoriteController : MonoBehaviour
             int n = Random.Range(0, rocks.Length);
 
             //Tipos de meteoritos, posición al generarse, rotación al generarse, dentro de que "Gameobject" se genera
-            Instantiate(rocks[n], new Vector3(posX, 25, posZ), rocks[n].transform.rotation, parentObject.transform);
+            
+
+            GameObject meteoriteInstantiate = MeteoritePooling.instance.GetPooledObject(n);
+            meteoriteInstantiate.SetActive(true);
+            meteoriteInstantiate.transform.position = new Vector3(posX, 25, posZ);
+            meteoriteInstantiate.transform.rotation = rocks[n].transform.rotation;
+            
+
             
             Debug.Log("Meteorite");          
         }

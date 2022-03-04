@@ -30,20 +30,37 @@ public class RoverPath : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > nextTime)
+        /*if (Time.time > nextTime)
         {
 
             if(iSeeYou == true)
             { 
                 TimerFollow();
             }
-        }
+        }*/
 
-        if(Vector3.Distance(transform.position, target.position) < 10f && iSeeYou==false)
+        if(Vector3.Distance(transform.position, target.position) < 10f)
         {
-            agent.destination = target.position;
+            //agent.destination = target.position;
             iSeeYou = true;
 
+            if (Time.time > nextTime)
+            {
+
+                if(iSeeYou == true)
+                { 
+                    TimerFollow();
+                }
+            }
+        }
+        else
+        {
+            iSeeYou = false;
+        }
+
+        if(iSeeYou)
+        {
+            agent.destination = target.position;
         }
         else
         {

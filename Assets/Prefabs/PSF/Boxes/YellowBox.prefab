@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2154778600051794675}
   - component: {fileID: 2090601427627874977}
   - component: {fileID: -5807915473530191344}
+  - component: {fileID: -2660941266019159742}
   m_Layer: 0
   m_Name: YellowBox
   m_TagString: Box2
@@ -80,7 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructionTime: 1
   coins: {fileID: 0}
-  CajaSFX: {fileID: 8300000, guid: c93a85c36bdd82741a48d84f53048904, type: 3}
 --- !u!114 &2154778600051794675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +206,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2660941266019159742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4274352187384984870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3d6d5f61aa7f2468b069feb8d65292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CajaSFX: {fileID: 8300000, guid: c93a85c36bdd82741a48d84f53048904, type: 3}
 --- !u!1 &7020718176637137754
 GameObject:
   m_ObjectHideFlags: 0
