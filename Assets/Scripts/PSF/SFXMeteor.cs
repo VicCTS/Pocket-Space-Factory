@@ -17,7 +17,7 @@ public class SFXMeteor : MonoBehaviour
     {
         if (Global.canSFXPlay == true)
         {
-            audioSource.PlayOneShot(meteor[Random.Range(0,1)], 1f);
+            audioSource.PlayOneShot(meteor[Random.Range(0,2)], 1f);
         }   
     }
 
