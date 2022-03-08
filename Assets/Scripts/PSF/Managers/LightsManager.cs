@@ -50,55 +50,67 @@ public class LightsManager : MonoBehaviour
 
     private IEnumerator PathLights()
     {
-        yield return new WaitForSeconds(pathLightsTime);
+        if(Performance.rendimiento){
+            yield return new WaitForSeconds(pathLightsTime);
 
-        if (pathLightsOn == true)
-        {
-            pathLights.SetActive(false);
-            pathLightsOn = false;
-            PathLightsControl();
-        }
-        else
-        {
-            pathLights.SetActive(true);
-            pathLightsOn = true;
-            PathLightsControl();
+            if (pathLightsOn == true)
+            {
+                pathLights.SetActive(false);
+                pathLightsOn = false;
+                PathLightsControl();
+            }
+            else
+            {
+                pathLights.SetActive(true);
+                pathLightsOn = true;
+                PathLightsControl();
+            }
+        }else{
+            yield return null;
         }
     }
 
     private IEnumerator MonorailLights()
     {
-        yield return new WaitForSeconds(monorailLightsTime);
+        if(Performance.rendimiento){
+            yield return new WaitForSeconds(monorailLightsTime);
 
-        if (monorailLightsOn == true)
-        {
-            monorailLights.SetActive(false);
-            monorailLightsOn = false;
-            MonorailLightsControl();
-        }
-        else
-        {
-            monorailLights.SetActive(true);
-            monorailLightsOn = true;
-            MonorailLightsControl();
+            if (monorailLightsOn == true)
+            {
+                monorailLights.SetActive(false);
+                monorailLightsOn = false;
+                MonorailLightsControl();
+            }
+            else
+            {
+                monorailLights.SetActive(true);
+                monorailLightsOn = true;
+                MonorailLightsControl();
+            }
+        }else{
+            yield return null;
         }
     }
 
     private IEnumerator OtherLights()
     {
-        yield return new WaitForSeconds(otherLightsTime);
+        if(Performance.rendimiento){
+            yield return new WaitForSeconds(otherLightsTime);
 
-        if (otherLightsOn == true)
-        {
-            otherLights.SetActive(false);
-            otherLightsOn = false;
-            OtherLightsControl();
-        }
-        else
-        {
-            otherLights.SetActive(true);
-            otherLightsOn = true;
-            OtherLightsControl();
+            if (otherLightsOn == true)
+            {
+                otherLights.SetActive(false);
+                otherLightsOn = false;
+                OtherLightsControl();
+            }
+            else
+            {
+                otherLights.SetActive(true);
+                otherLightsOn = true;
+                OtherLightsControl();
+            }
+        }else{
+            yield return null;
         }
     }
 }
