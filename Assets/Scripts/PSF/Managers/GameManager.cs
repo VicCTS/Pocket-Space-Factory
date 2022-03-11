@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject boxLevelSuccess;
     public GameObject boxGameEnd;
     public GameObject pauseBox;
+    public GameObject fundido;
 
     [Header("State")]
     public bool isPlaying;           //Determina si estamos jugando o no. Hace referencia a cuando ponemos pause.
@@ -36,7 +37,6 @@ public class GameManager : MonoBehaviour
     public Machine1 machine1;
     public Machine3 machine3;
     public PlayerController playerController;
-    public GameObject fundido;
 
     [Header("Timeline Assets")]
     public GameObject boxAnim1;
@@ -75,6 +75,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("MAXLVLARRIBAT: " + Global.maxLevel);
 
         soundManager.PlayGameSoundtrack();
+    }
+
+    private void Update() {
+        if(Input.GetKey("m"))
+        {
+            PlayerPrefs.SetInt("CinematicaReproducida", 0);
+        }
     }
 
     //AUDIO
@@ -818,8 +825,8 @@ public class GameManager : MonoBehaviour
         fundido.SetActive(false);
         PlayerPrefs.SetInt("CinematicaReproducida", 1);
         unPauseGame();
-
-
+        StartCoroutine(FundidoActive());
+    
     }
 
     public void DesactivarCinematica()
@@ -828,6 +835,14 @@ public class GameManager : MonoBehaviour
         boxAnim2.SetActive(false);
         boxAnim3.SetActive(false);
         timeline.SetActive(false);
-        fundido.SetActive(false);
+        //fundido.SetActive(false);
+    }
+
+    public IEnumerator FundidoActive(){
+        SceneManager.LoadScene("PSF");
+        yield return new WaitForSeconds(1f);
+        fundido.GetComponent<Animator>().SetInteger("Fade", 2);
+
+        
     }
 }

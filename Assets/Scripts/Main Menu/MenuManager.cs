@@ -23,6 +23,9 @@ public class MenuManager : MonoBehaviour
     public GameObject privacyPolicyBox;
     public GameObject termsOfServiceBox;
     public GameObject statisticsBox;
+    public GameObject tutorialBox;
+    public GameObject pasarPaginaBox;
+    public GameObject pasarPagina2Box;
     public GameObject audioOn;
     public GameObject audioOff;
     public GameObject sfxOn;
@@ -183,6 +186,36 @@ public class MenuManager : MonoBehaviour
     public void HideStatisticsMenu()
     {
         statisticsBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+    }
+
+    public void ShowTutorialMenu()
+    {
+        tutorialBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HideTutorialMenu()
+    {
+        tutorialBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+    }
+
+    public void ShowPasarPaginaMenu()
+    {
+        pasarPaginaBox.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HidePasarPaginaMenu()
+    {
+        pasarPaginaBox.GetComponent<Animator>().SetInteger("StateBox", 2);
+    }
+
+    public void ShowPasarPagina2Menu()
+    {
+        pasarPagina2Box.GetComponent<Animator>().SetInteger("StateBox", 1);
+    }
+
+    public void HidePasarPagina2Menu()
+    {
+        pasarPagina2Box.GetComponent<Animator>().SetInteger("StateBox", 2);
     }
 
     public void PlayGame()
