@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.14f1 (d0d1bb862f9d) revision 13685179'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1526; Version 2009; 64bit' Language: 'es' Physical Memory: 16299 MB
+OS: 'Windows 10 Pro; OS build 19042.1586; Version 2009; 64bit' Language: 'es' Physical Memory: 16299 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/victo/OneDrive/Documentos/GitHub/Pocket-Space-Factory
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65526
+62658
 Successfully changed project path to: C:/Users/victo/OneDrive/Documentos/GitHub/Pocket-Space-Factory
 C:/Users/victo/OneDrive/Documentos/GitHub/Pocket-Space-Factory
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 48.59 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 50.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.14f1 (d0d1bb862f9d)
 [Subsystems] Discovering subsystems at path C:/Program Files/2020.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -36,37 +36,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2020.3.14f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001599 seconds.
+Registered in 0.001585 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 48.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.913 seconds
+- Completed reload, in  1.985 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1914ms)
-		BeginReloadAssembly (43ms)
+	ReloadAssembly (1985ms)
+		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (340ms)
+		EndReloadAssembly (337ms)
 			LoadAssemblies (41ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (118ms)
+			SetupTypeCache (117ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (144ms)
+			SetupLoadedEditorAssemblies (143ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (49ms)
+				RefreshPlugins (48ms)
 				BeforeProcessingInitializeOnLoad (8ms)
-				ProcessInitializeOnLoadAttributes (63ms)
+				ProcessInitializeOnLoadAttributes (62ms)
 				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -74,34 +74,34 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003409 seconds.
+Registered in 0.003461 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.826 seconds
+- Completed reload, in  0.823 seconds
 Domain Reload Profiling:
-	ReloadAssembly (826ms)
-		BeginReloadAssembly (115ms)
+	ReloadAssembly (823ms)
+		BeginReloadAssembly (114ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (659ms)
-			LoadAssemblies (68ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (656ms)
+			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (219ms)
+			SetupTypeCache (222ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (252ms)
+			SetupLoadedEditorAssemblies (249ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadAttributes (166ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
@@ -112,14 +112,14 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1988 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.5 MB.
+System memory in use before: 98.6 MB.
 System memory in use after: 98.6 MB.
 
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2434.
-Total: 1.651000 ms (FindLiveObjects: 0.154800 ms CreateObjectMapping: 0.042000 ms MarkObjects: 1.384300 ms  DeleteObjects: 0.069300 ms)
+Total: 1.782200 ms (FindLiveObjects: 0.185700 ms CreateObjectMapping: 0.048600 ms MarkObjects: 1.476600 ms  DeleteObjects: 0.070500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -133,237 +133,106 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Publishing/Capturas/CapturaJuego1.PNG
-  artifactKey: Guid(6cd744da106b0e243a85d496264e365f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego1.PNG using Guid(6cd744da106b0e243a85d496264e365f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5666485b6345a9fe18b9a0742dcf6d27') in 0.086115 seconds 
-  Import took 0.088862 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Publishing/Capturas/CapturaJuego2.PNG
-  artifactKey: Guid(bedb5f9daeea6414cacfd1fd49cb0339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego2.PNG using Guid(bedb5f9daeea6414cacfd1fd49cb0339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a91cb5b7720f003a9d499617db4baeab') in 0.017737 seconds 
-  Import took 0.020285 seconds .
+  path: Assets/Sprites/Title/1.Caja_Horizontal.png
+  artifactKey: Guid(3f841fa092464604dafc469e904445a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/1.Caja_Horizontal.png using Guid(3f841fa092464604dafc469e904445a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e35c3e0b60db446859eeec33705d7a') in 0.119499 seconds 
+  Import took 0.122211 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000163 seconds.
-  path: Assets/Publishing/Capturas/CapturaMenu.PNG
-  artifactKey: Guid(9b4b487dd13290b49bfb7ef600260acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaMenu.PNG using Guid(9b4b487dd13290b49bfb7ef600260acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '689eba3926f509e813c699f269bf4ce4') in 0.013943 seconds 
-  Import took 0.016537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/Publishing/Capturas/CapturaJuego4.PNG
-  artifactKey: Guid(e4f4ac8a1ec1c414f87475fc748a9cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego4.PNG using Guid(e4f4ac8a1ec1c414f87475fc748a9cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895da129dd88c8048eb448f11d8ee479') in 0.014840 seconds 
-  Import took 0.017551 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Publishing/Capturas/CapturaMenu2.PNG
-  artifactKey: Guid(c5386e54b12df9747ab429789a65f20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaMenu2.PNG using Guid(c5386e54b12df9747ab429789a65f20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7146af8b00ac0139653a0d7e254ab030') in 0.012984 seconds 
-  Import took 0.015759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Publishing/Capturas/CapturaJuego3.PNG
-  artifactKey: Guid(306d776d104b7a3439678e4522a2e560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego3.PNG using Guid(306d776d104b7a3439678e4522a2e560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d9a9685d9a74e1517190da161d7cc9') in 0.012627 seconds 
-  Import took 0.015819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Publishing/Capturas/CapturaJuego5.PNG
-  artifactKey: Guid(576033e823a49ea4992615aa40f584f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego5.PNG using Guid(576033e823a49ea4992615aa40f584f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404e7c672d53b2be4301274463264f10') in 0.012721 seconds 
-  Import took 0.015733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Publishing/Capturas/CapturaTitle.PNG
-  artifactKey: Guid(677354da89c46e144a4afa0717d9debe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaTitle.PNG using Guid(677354da89c46e144a4afa0717d9debe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '779f3068a2800f20b494f697c8fb40b1') in 0.014662 seconds 
-  Import took 0.017549 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/Publishing/Capturas/CapturaJuego6.PNG
-  artifactKey: Guid(a5e886a2210def64da8f1f48c8a406ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaJuego6.PNG using Guid(a5e886a2210def64da8f1f48c8a406ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72ef174ea47303ee66428a2027460d51') in 0.012637 seconds 
-  Import took 0.015738 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001802 seconds.
-  path: Assets/Publishing/Capturas/CapturaTitle.PNG
-  artifactKey: Guid(677354da89c46e144a4afa0717d9debe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/Capturas/CapturaTitle.PNG using Guid(677354da89c46e144a4afa0717d9debe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '779f3068a2800f20b494f697c8fb40b1') in 0.012138 seconds 
-  Import took 0.014994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.726130 seconds.
-  path: Assets/Publishing/ScreenShots/Cabezera.png
-  artifactKey: Guid(332d5390818cfb04691051fe58621cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Cabezera.png using Guid(332d5390818cfb04691051fe58621cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c98284e9fd3bacf0eba1ac41bea7a3ba') in 0.016191 seconds 
-  Import took 0.019079 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000125 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-11-49-964_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(6752d3c3b04852e4ca8583f8716b569d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-11-49-964_com.CTS.PocketSpaceFactory.jpg using Guid(6752d3c3b04852e4ca8583f8716b569d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbafcde023481dcf2d6018a675479495') in 0.041758 seconds 
-  Import took 0.044295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-59-340_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(1c2279db3960cc14fba94938241c4024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-59-340_com.CTS.PocketSpaceFactory.jpg using Guid(1c2279db3960cc14fba94938241c4024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b40af227c4613f024dd72278b55fc98') in 0.028712 seconds 
-  Import took 0.031359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-12-592_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(4dda2f03ef549b74ab50f00d1a9939e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-12-592_com.CTS.PocketSpaceFactory.jpg using Guid(4dda2f03ef549b74ab50f00d1a9939e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb19c7cbd3f4ad8e4155b56e26e6f561') in 0.029196 seconds 
-  Import took 0.031927 seconds .
+  path: Assets/Sprites/Title/BocataComic.png
+  artifactKey: Guid(9569cab799caabf428c2f64119240c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/BocataComic.png using Guid(9569cab799caabf428c2f64119240c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d0e6ac349b67c86f1b56718140eaa4') in 0.012844 seconds 
+  Import took 0.015151 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000137 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-22-001_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(9950db7cf051db545b23712c97269c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-22-001_com.CTS.PocketSpaceFactory.jpg using Guid(9950db7cf051db545b23712c97269c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b797dd343d77b9ebf4300e6cceca080') in 0.027871 seconds 
-  Import took 0.030528 seconds .
+  path: Assets/Sprites/Title/TitleBackground.jpg
+  artifactKey: Guid(6f0c1dbe3edb363408f98665eb9d5057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/TitleBackground.jpg using Guid(6f0c1dbe3edb363408f98665eb9d5057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599bba0186bdece1ad61b04c41647ed8') in 0.022256 seconds 
+  Import took 0.024664 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-30-984_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(7ac626b62f4f9884ab7bde0625f62a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-12-30-984_com.CTS.PocketSpaceFactory.jpg using Guid(7ac626b62f4f9884ab7bde0625f62a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe14a1b9813f996f54232657782edf7e') in 0.025953 seconds 
-  Import took 0.028633 seconds .
+  Time since last request: 0.000160 seconds.
+  path: Assets/Sprites/Title/Logo.png
+  artifactKey: Guid(f1f5d5d487c6b7a4ab79e4d2b7ab9d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/Logo.png using Guid(f1f5d5d487c6b7a4ab79e4d2b7ab9d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fb523a518d5a1a767e28f7fd51132b') in 0.025681 seconds 
+  Import took 0.028389 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000139 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-13-16-093_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(e9ff916b8de49b8478cda20bdc0603b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-13-16-093_com.CTS.PocketSpaceFactory.jpg using Guid(e9ff916b8de49b8478cda20bdc0603b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448db20ea7b6085682125fd5b6295269') in 0.025836 seconds 
-  Import took 0.028570 seconds .
+  path: Assets/Sprites/Title/1.Boton_Horizontal.png
+  artifactKey: Guid(74ffe29caca00324982aa11c17df1dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/1.Boton_Horizontal.png using Guid(74ffe29caca00324982aa11c17df1dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f6e1dde979c42cf3106627fcec036c') in 0.009378 seconds 
+  Import took 0.011766 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-13-16-093_com.CTS.PocketSpaceFactory.jpg
-  artifactKey: Guid(e9ff916b8de49b8478cda20bdc0603b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Publishing/ScreenShots/Screenshot_2022-01-26-17-13-16-093_com.CTS.PocketSpaceFactory.jpg using Guid(e9ff916b8de49b8478cda20bdc0603b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448db20ea7b6085682125fd5b6295269') in 0.024579 seconds 
-  Import took 0.027191 seconds .
+  Time since last request: 0.000136 seconds.
+  path: Assets/Sprites/Title/Star.png
+  artifactKey: Guid(12bd5ee3db2e8f2478de88257bae429d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/Star.png using Guid(12bd5ee3db2e8f2478de88257bae429d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6340becca2162e426b024d505d3e6016') in 0.010932 seconds 
+  Import took 0.013478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 340.527167 seconds.
+  path: Assets/Sprites/Title/LogoSinPuro.png
+  artifactKey: Guid(8faaa309e86cc444fa57aa85d8c3f6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/LogoSinPuro.png using Guid(8faaa309e86cc444fa57aa85d8c3f6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '510a67c61fe7392ad26b1c6b9627a698') in 0.033585 seconds 
+  Import took 0.036688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.352636 seconds.
+  path: Assets/Sprites/Title/LogoSinPuro.png
+  artifactKey: Guid(8faaa309e86cc444fa57aa85d8c3f6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Title/LogoSinPuro.png using Guid(8faaa309e86cc444fa57aa85d8c3f6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99a1993da97967d653e1ee0caae607b') in 0.024988 seconds 
+  Import took 0.027810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.283095 seconds.
+  path: Assets/Scenes/Title.unity
+  artifactKey: Guid(70a8990eab5944a47ba7a1276948b856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Title.unity using Guid(70a8990eab5944a47ba7a1276948b856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d9c4caf2fc130f1e7e14785673a696') in 0.004444 seconds 
+  Import took 0.007211 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003352 seconds.
+Registered in 0.003299 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.780 seconds
+- Completed reload, in  0.771 seconds
 Domain Reload Profiling:
-	ReloadAssembly (781ms)
-		BeginReloadAssembly (100ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (630ms)
-			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (213ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (230ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (153ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.6 MB.
-System memory in use after: 92.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2438.
-Total: 1.618100 ms (FindLiveObjects: 0.138100 ms CreateObjectMapping: 0.042500 ms MarkObjects: 1.393900 ms  DeleteObjects: 0.042900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003310 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.788 seconds
-Domain Reload Profiling:
-	ReloadAssembly (788ms)
+	ReloadAssembly (771ms)
 		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (638ms)
-			LoadAssemblies (67ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (622ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
+			SetupTypeCache (212ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (231ms)
+			SetupLoadedEditorAssemblies (226ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (154ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (151ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
@@ -372,14 +241,14 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.6 MB.
-System memory in use after: 92.7 MB.
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2440.
-Total: 1.792400 ms (FindLiveObjects: 0.176900 ms CreateObjectMapping: 0.043800 ms MarkObjects: 1.518400 ms  DeleteObjects: 0.052200 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2451.
+Total: 1.671700 ms (FindLiveObjects: 0.153900 ms CreateObjectMapping: 0.051900 ms MarkObjects: 1.416700 ms  DeleteObjects: 0.048300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -394,200 +263,42 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 140.432563 seconds.
-  path: Assets/In Progress/MeteoritesPool.prefab
-  artifactKey: Guid(434b85a6dd433f449bb2df33602770f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/In Progress/MeteoritesPool.prefab using Guid(434b85a6dd433f449bb2df33602770f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f460509a40ba2d734831a437ccaf37b8') in 0.021578 seconds 
-  Import took 0.024529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/In Progress/PoolingManager.prefab
-  artifactKey: Guid(40fa3ddfb9a92434abaa7531b82ef150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/In Progress/PoolingManager.prefab using Guid(40fa3ddfb9a92434abaa7531b82ef150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e93cb1bd8c43623caaae46b50534a94') in 0.009531 seconds 
-  Import took 0.012136 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.533741 seconds.
-  path: Assets/In Progress/MeteoritePooling.cs
-  artifactKey: Guid(3105f1470057ccb48830a631f7bc1857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/In Progress/MeteoritePooling.cs using Guid(3105f1470057ccb48830a631f7bc1857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '127e2ba69cc341e64e24862da1fbe133') in 0.006176 seconds 
-  Import took 0.008945 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.017700 seconds.
-  path: Assets/In Progress/MeteoritePooling.cs
-  artifactKey: Guid(3105f1470057ccb48830a631f7bc1857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/In Progress/MeteoritePooling.cs using Guid(3105f1470057ccb48830a631f7bc1857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '127e2ba69cc341e64e24862da1fbe133') in 0.001772 seconds 
-  Import took 0.004590 seconds .
+  Time since last request: 28.563295 seconds.
+  path: Assets/Scenes/Title.unity
+  artifactKey: Guid(70a8990eab5944a47ba7a1276948b856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Title.unity using Guid(70a8990eab5944a47ba7a1276948b856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e9cbfc8572f0af191a1acc05c12e58') in 0.009002 seconds 
+  Import took 0.011724 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003285 seconds.
+Registered in 0.003213 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.789 seconds
 Domain Reload Profiling:
-	ReloadAssembly (789ms)
-		BeginReloadAssembly (96ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (641ms)
-			LoadAssemblies (68ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (229ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (152ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.7 MB.
-System memory in use after: 92.8 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2442.
-Total: 1.741200 ms (FindLiveObjects: 0.191300 ms CreateObjectMapping: 0.051500 ms MarkObjects: 1.453300 ms  DeleteObjects: 0.044300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 158.125496 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(974d7b61afc5d2b45af04d7117deb30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(974d7b61afc5d2b45af04d7117deb30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c819ee38e25ac350ba59fbeaedb5906') in 0.012431 seconds 
-  Import took 0.015550 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003195 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.791 seconds
-Domain Reload Profiling:
-	ReloadAssembly (791ms)
-		BeginReloadAssembly (94ms)
+	ReloadAssembly (790ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (645ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (209ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (233ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (156ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.7 MB.
-System memory in use after: 92.8 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2444.
-Total: 1.648000 ms (FindLiveObjects: 0.158200 ms CreateObjectMapping: 0.040300 ms MarkObjects: 1.407100 ms  DeleteObjects: 0.041600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 50.019844 seconds.
-  path: Assets/Scenes/PSF.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/PSF.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb3a34a2396fed7f797b4718ec80e13d') in 0.012508 seconds 
-  Import took 0.015502 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003239 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.802 seconds
-Domain Reload Profiling:
-	ReloadAssembly (802ms)
-		BeginReloadAssembly (101ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (649ms)
+		EndReloadAssembly (640ms)
 			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (209ms)
+			SetupTypeCache (213ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (233ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (234ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
+				BeforeProcessingInitializeOnLoad (64ms)
 				ProcessInitializeOnLoadAttributes (157ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
 				AfterProcessingInitializeOnLoad (5ms)
@@ -597,186 +308,14 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.6 MB.
-System memory in use after: 92.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2446.
-Total: 1.894400 ms (FindLiveObjects: 0.165500 ms CreateObjectMapping: 0.053100 ms MarkObjects: 1.628300 ms  DeleteObjects: 0.046700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003145 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.887 seconds
-Domain Reload Profiling:
-	ReloadAssembly (887ms)
-		BeginReloadAssembly (95ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (736ms)
-			LoadAssemblies (69ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (261ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (84ms)
-				ProcessInitializeOnLoadAttributes (158ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.6 MB.
-System memory in use after: 92.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2448.
-Total: 1.678600 ms (FindLiveObjects: 0.170400 ms CreateObjectMapping: 0.043700 ms MarkObjects: 1.415900 ms  DeleteObjects: 0.047600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 2.82 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 56.1 MB.
-System memory in use after: 56.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2448.
-Total: 1.661600 ms (FindLiveObjects: 0.162100 ms CreateObjectMapping: 0.041700 ms MarkObjects: 1.387700 ms  DeleteObjects: 0.069300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1009.229720 seconds.
-  path: Assets/Prefabs/PSF/Boxes/BlueBox.prefab
-  artifactKey: Guid(4a51d67f3282a314aa6eaa09228db43a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PSF/Boxes/BlueBox.prefab using Guid(4a51d67f3282a314aa6eaa09228db43a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301427af29cc61d06c1d9a1ed21db916') in 0.062619 seconds 
-  Import took 0.066765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000123 seconds.
-  path: Assets/Prefabs/PSF/Boxes/RedBox.prefab
-  artifactKey: Guid(c07e6f14432f9a44496d03256e6439ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PSF/Boxes/RedBox.prefab using Guid(c07e6f14432f9a44496d03256e6439ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6923176dc0faa9fbbd9a71c858f22c6') in 0.012465 seconds 
-  Import took 0.015664 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/Prefabs/PSF/Boxes/YellowBox.prefab
-  artifactKey: Guid(135d70435b3ac694fb35f3e3d8201403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PSF/Boxes/YellowBox.prefab using Guid(135d70435b3ac694fb35f3e3d8201403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78b88ec44f4554fd96eb1cb92630843e') in 0.010042 seconds 
-  Import took 0.013155 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 120.245536 seconds.
-  path: Assets/Scenes/PSF.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/PSF.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13657b18bc4782c87ce3e0dc40868d7a') in 0.006526 seconds 
-  Import took 0.010135 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003200 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.825 seconds
-Domain Reload Profiling:
-	ReloadAssembly (825ms)
-		BeginReloadAssembly (98ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (674ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (217ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (232ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (156ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
+System memory in use after: 95.6 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2457.
-Total: 1.680300 ms (FindLiveObjects: 0.168400 ms CreateObjectMapping: 0.044700 ms MarkObjects: 1.411300 ms  DeleteObjects: 0.055000 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2453.
+Total: 1.669300 ms (FindLiveObjects: 0.160600 ms CreateObjectMapping: 0.046500 ms MarkObjects: 1.415600 ms  DeleteObjects: 0.045900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -792,316 +331,50 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003347 seconds.
+Registered in 0.003417 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.808 seconds
+- Completed reload, in  0.779 seconds
 Domain Reload Profiling:
-	ReloadAssembly (808ms)
+	ReloadAssembly (779ms)
 		BeginReloadAssembly (91ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (664ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (636ms)
 			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (226ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (150ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2459.
-Total: 1.735600 ms (FindLiveObjects: 0.151500 ms CreateObjectMapping: 0.050800 ms MarkObjects: 1.488700 ms  DeleteObjects: 0.043500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003345 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.870 seconds
-Domain Reload Profiling:
-	ReloadAssembly (871ms)
-		BeginReloadAssembly (90ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (726ms)
-			LoadAssemblies (73ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (253ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (70ms)
-				ProcessInitializeOnLoadAttributes (169ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2461.
-Total: 1.971800 ms (FindLiveObjects: 0.198500 ms CreateObjectMapping: 0.043200 ms MarkObjects: 1.675200 ms  DeleteObjects: 0.054000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003593 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.826 seconds
-Domain Reload Profiling:
-	ReloadAssembly (826ms)
-		BeginReloadAssembly (98ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (675ms)
-			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (210ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (229ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (152ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2463.
-Total: 1.670400 ms (FindLiveObjects: 0.146900 ms CreateObjectMapping: 0.042500 ms MarkObjects: 1.429900 ms  DeleteObjects: 0.050500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003221 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.819 seconds
-Domain Reload Profiling:
-	ReloadAssembly (819ms)
-		BeginReloadAssembly (89ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (677ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (214ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (229ms)
+			SetupLoadedEditorAssemblies (230ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadAttributes (153ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.6 MB.
 System memory in use after: 95.7 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2465.
-Total: 1.690500 ms (FindLiveObjects: 0.146100 ms CreateObjectMapping: 0.051300 ms MarkObjects: 1.449800 ms  DeleteObjects: 0.042600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 2.77 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.1 MB.
-System memory in use after: 59.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2465.
-Total: 1.696400 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.038300 ms MarkObjects: 1.426000 ms  DeleteObjects: 0.065000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 422.808027 seconds.
-  path: Assets/Scripts/Performance.cs
-  artifactKey: Guid(d80574d48cf870a40bce6f2b0fe2dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Performance.cs using Guid(d80574d48cf870a40bce6f2b0fe2dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021212724d231116530b8663b7298ccc') in 0.006332 seconds 
-  Import took 0.010010 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003258 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Domain Reload Profiling:
-	ReloadAssembly (839ms)
-		BeginReloadAssembly (84ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (701ms)
-			LoadAssemblies (72ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (223ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (231ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (154ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2467.
-Total: 1.635000 ms (FindLiveObjects: 0.143600 ms CreateObjectMapping: 0.043400 ms MarkObjects: 1.405300 ms  DeleteObjects: 0.041800 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2455.
+Total: 1.709900 ms (FindLiveObjects: 0.154800 ms CreateObjectMapping: 0.051800 ms MarkObjects: 1.454000 ms  DeleteObjects: 0.048600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1116,113 +389,18 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.827859 seconds.
-  path: Assets/Scripts/Performance.cs
-  artifactKey: Guid(d80574d48cf870a40bce6f2b0fe2dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Performance.cs using Guid(d80574d48cf870a40bce6f2b0fe2dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0a1a28b406e6d85fa8a7d3b582238f') in 0.004202 seconds 
-  Import took 0.007683 seconds .
+  Time since last request: 966.582074 seconds.
+  path: Assets/Publishing/Capturas
+  artifactKey: Guid(cd739e849a400924dbc344f7a62d5f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Publishing/Capturas using Guid(cd739e849a400924dbc344f7a62d5f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44c6d4bdeff768e919a1965a4ce7588') in 0.007670 seconds 
+  Import took 0.010751 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003282 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
-Domain Reload Profiling:
-	ReloadAssembly (855ms)
-		BeginReloadAssembly (107ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (695ms)
-			LoadAssemblies (75ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (231ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (154ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 95.7 MB.
+Received Import Request.
+  Time since last request: 9.461965 seconds.
+  path: Assets/Publishing/ScreenShots
+  artifactKey: Guid(91824fccdc560d147a61d408b56b5fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Publishing/ScreenShots using Guid(91824fccdc560d147a61d408b56b5fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '250967402f4003b0c11e3d2d749a9559') in 0.004608 seconds 
+  Import took 0.007376 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2469.
-Total: 1.873200 ms (FindLiveObjects: 0.147500 ms CreateObjectMapping: 0.058600 ms MarkObjects: 1.619300 ms  DeleteObjects: 0.047100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 2.79 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.1 MB.
-System memory in use after: 59.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2469.
-Total: 1.636900 ms (FindLiveObjects: 0.162600 ms CreateObjectMapping: 0.041300 ms MarkObjects: 1.369600 ms  DeleteObjects: 0.062900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Shader 'Ethical Motion/Particles/Lit MultiLight': fallback shader 'Hidden/Ethical Motion/Particles/Lit Alpha Blend Shadow Fallback' not found
-Refreshing native plugins compatible for Editor in 2.55 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.1 MB.
-System memory in use after: 59.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2469.
-Total: 1.875600 ms (FindLiveObjects: 0.163500 ms CreateObjectMapping: 0.041300 ms MarkObjects: 1.607200 ms  DeleteObjects: 0.062900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

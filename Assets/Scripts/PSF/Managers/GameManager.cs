@@ -835,7 +835,7 @@ public class GameManager : MonoBehaviour
         boxAnim2.SetActive(false);
         boxAnim3.SetActive(false);
         timeline.SetActive(false);
-        //fundido.SetActive(false);
+        fundido.SetActive(false);
     }
 
     public IEnumerator FundidoActive(){
