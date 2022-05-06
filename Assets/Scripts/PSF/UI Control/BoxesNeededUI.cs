@@ -13,6 +13,11 @@ public class BoxesNeededUI : MonoBehaviour
     public Text position1;
     public Text position2;
     public Text position3;
+    public Text totalBoxes;
+    public Button buttonRight;
+    public Button buttonLeft;
+    public int totalboxesnumber;
+    public int deliveredBoxes = 0;
 
     public int listPosition = 0;
 
@@ -27,7 +32,13 @@ public class BoxesNeededUI : MonoBehaviour
         for(int i = 0; i < 3; i++){
             FillNeededBoxesLayout(i);
         }
+        totalboxesnumber = Global.requestBox.Count;
+        totalBoxes.text = totalboxesnumber.ToString();
 
+        if(Global.requestBox.Count <= 3){
+            buttonLeft.GetComponent<Button>().interactable = false;
+            buttonRight.GetComponent<Button>().interactable = false;
+        }
     }
 
     public void FillNeededBoxesLayout(int i){
@@ -95,6 +106,16 @@ public class BoxesNeededUI : MonoBehaviour
         for(int i = 0; i < 3; i++){
             FillNeededBoxesLayout(i);
         }
+        if(Global.requestBox.Count - deliveredBoxes <= 3){
+            /*var tempColor = buttonLeft.GetComponent<Image>().color;
+            tempColor.a = 0.5f;
+            buttonLeft.GetComponent<Image>().color = tempColor;
+            buttonRight.GetComponent<Image>().color = tempColor;*/
+            buttonLeft.GetComponent<Button>().interactable = false;
+            buttonRight.GetComponent<Button>().interactable = false;
+        }
+        totalBoxes.text = (Global.requestBox.Count - deliveredBoxes).ToString();
+        
     }
 
     public void SlideLeft(){

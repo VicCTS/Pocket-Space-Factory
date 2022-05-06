@@ -21,7 +21,9 @@ public class DeliveryZoneMach2 : MonoBehaviour
                 Global.score += Global.machine2Score;
                 gameManager.ShowScoreInfo();
                 gameManager.UpdateBox();
+                gameManager.GetComponent<BoxesNeededUI>().deliveredBoxes++;
                 gameManager.GetComponent<BoxesNeededUI>().SlideRight();
+                
             }
             
         }

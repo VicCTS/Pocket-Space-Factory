@@ -17,6 +17,7 @@ public class ShopManager : MonoBehaviour
     public GameObject PU4;
     public GameObject PU5;
     public GameObject PU6;
+    public Image BG;
 
     public int IdPowUp;
     private int valueButt;
@@ -77,6 +78,7 @@ public class ShopManager : MonoBehaviour
             //Compra el Boost
                 Global.score = Global.score - Global.priceSpeedBoost;
                 IdPowUp = 1;
+                BG.color = new Color32(225,225,225,225);
                 PU1.SetActive(true);
                 havePU = true;
             }else{
@@ -90,6 +92,7 @@ public class ShopManager : MonoBehaviour
             if(Global.score >= Global.priceStopMachineBoost ){
                 Global.score = Global.score - Global.priceStopMachineBoost;
                 IdPowUp = 2;
+                BG.color = new Color32(225,225,225,225);
                 PU2.SetActive(true);
                 havePU = true;
 
@@ -103,6 +106,7 @@ public class ShopManager : MonoBehaviour
             if(Global.score >= Global.priceClearMeteoBoost){
                 Global.score = Global.score - Global.priceClearMeteoBoost;
                 IdPowUp = 3;
+                BG.color = new Color32(225,225,225,225);
                 PU3.SetActive(true);
                 havePU = true;
 
@@ -116,6 +120,7 @@ public class ShopManager : MonoBehaviour
             if(Global.score >= Global.priceCapsuleBoost){
                 Global.score = Global.score - Global.priceCapsuleBoost;
                 IdPowUp = 4;
+                BG.color = new Color32(225,225,225,225);
                 PU4.SetActive(true);
                 havePU = true;
 
@@ -129,6 +134,7 @@ public class ShopManager : MonoBehaviour
             if(Global.score >= Global.priceMaxBoxsBoost ){
                 Global.score = Global.score - Global.priceMaxBoxsBoost;
                 IdPowUp = 6;
+                BG.color = new Color32(225,225,225,225);
                 PU6.SetActive(true);
 
                 havePU = true;

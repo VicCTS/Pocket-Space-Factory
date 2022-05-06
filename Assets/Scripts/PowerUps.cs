@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PowerUps : MonoBehaviour
 {
     public PlayerController playerController;
+    public ShopManager shopManager;
     public GameManager gameManager;
     /*private Machine2 machine2;
     private Machine1 machine1;
@@ -53,6 +54,7 @@ public class PowerUps : MonoBehaviour
     private void Awake() 
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        shopManager = GameObject.Find("ShopPlatform").GetComponent<ShopManager>();
         gameManager = GetComponent<GameManager>();
         timeParent.SetActive(false);
 
@@ -107,6 +109,8 @@ public class PowerUps : MonoBehaviour
                 powerUpMachinesActived=false;
                 totalTimePause = 10;
                 shopmanager.PU2.SetActive(false);
+                shopManager.BG.color = new Color32(77,77,77,225);
+
             }
 
         }
@@ -161,6 +165,8 @@ public class PowerUps : MonoBehaviour
         playerController.speed = 6;
         powerUpSpeedActived=false;
         shopmanager.PU1.SetActive(false);
+        shopManager.BG.color = new Color32(77,77,77,225);
+
     }
 
     IEnumerator RestartMachines()
@@ -189,6 +195,8 @@ public class PowerUps : MonoBehaviour
         }
         //llamar a la corutina
         StartCoroutine ("DestroyMet");
+        shopManager.BG.color = new Color32(77,77,77,225);
+
     }   
 
     IEnumerator DestroyMet()
@@ -230,6 +238,8 @@ public class PowerUps : MonoBehaviour
             {
                 x2Time=0;
                 SingleMoney();
+                shopmanager.PU4.SetActive(false);
+
                 x2Time=maxx2Time;
             }
 
@@ -241,6 +251,10 @@ public class PowerUps : MonoBehaviour
         Global.machine1accumulatedBoxesLimit++;
         Global.machine2accumulatedBoxesLimit++;
         Global.machine3accumulatedBoxesLimit++;
+        shopmanager.PU6.SetActive(false);
+
+        shopManager.BG.color = new Color32(77,77,77,225);
+
     }
         
 
@@ -249,6 +263,9 @@ public class PowerUps : MonoBehaviour
         Global.machine1Score = Global.machine1Score / 2;
         Global.machine2Score = Global.machine2Score / 2;
         Global.machine3Score = Global.machine3Score / 2;
+        powerUpDubelMoney = false;
+        shopManager.BG.color = new Color32(77,77,77,225);
+
     }
 
 
@@ -263,6 +280,7 @@ public class PowerUps : MonoBehaviour
                     shopmanager.NoPU();
                     timeParent.SetActive(true);
 
+
                     
                 break;
                 case 2:
@@ -270,11 +288,13 @@ public class PowerUps : MonoBehaviour
                     shopmanager.NoPU();
                     timeParent.SetActive(true);
 
+
                 break;
                 case 3:
                     DestroyObjects();
                     shopmanager.NoPU();
                     shopmanager.PU3.SetActive(false);
+
 
                 break;
                 case 4:
@@ -287,7 +307,16 @@ public class PowerUps : MonoBehaviour
                     shopmanager.NoPU();
                     shopmanager.PU6.SetActive(false);
                     MoreBoxes();
+                   
+
                 break;
+
+                default:
+                
+                shopManager.BG.color = new Color32(77,77,77,225);
+
+                break;
+        
 
             }
         }
