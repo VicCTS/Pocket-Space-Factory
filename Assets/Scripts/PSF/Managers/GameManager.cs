@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Sprite box2;
     public Sprite box3;
     public float waitTimeUnpause;
+    public GameObject camDrag;
 
     [Header("UI Boxes")]
     public GameObject boxLevelFail;
@@ -613,6 +614,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(WaitTimeline());
             }else{
                 DesactivarCinematica();
+                ShowCamDrag();
             }
         }
         if(Global.level != 1){
@@ -778,6 +780,19 @@ public class GameManager : MonoBehaviour
         unPauseGame();
     }
 
+    public void ShowCamDrag()
+    {
+        camDrag.GetComponent<Animator>().SetInteger("StateBox", 1);
+        StartCoroutine(HideCamDrag());
+    }
+
+    IEnumerator HideCamDrag()
+    {
+        yield return new WaitForSeconds(4);
+        camDrag.GetComponent<Animator>().SetInteger("StateBox", 2);
+        unPauseGame();
+    }
+
     public IEnumerator WaitTimeline()
     {
         PauseGame();
@@ -786,6 +801,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("CinematicaReproducida", 1);
         unPauseGame();
         StartCoroutine(FundidoActive());
+        ShowCamDrag();
     
     }
 
