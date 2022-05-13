@@ -147,9 +147,9 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
 
-            Global.machine1BoxTime = 20;
-            Global.machine2BoxTime = 20;
-            Global.machine3BoxTime = 20;
+            Global.machine1BoxTime = 40;
+            Global.machine2BoxTime = 40;
+            Global.machine3BoxTime = 35;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -167,11 +167,10 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(3);
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
             
-            Global.machine1BoxTime = 25;
-            Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 25;
+            Global.machine1BoxTime = 40;
+            Global.machine2BoxTime = 30;
+            Global.machine3BoxTime = 30;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -186,14 +185,14 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
             
-            Global.requestBox.Add(1);
             Global.requestBox.Add(2);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
             
-            Global.machine1BoxTime = 25;
-            Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 25;
+            Global.machine1BoxTime = 45;
+            Global.machine2BoxTime = 30;
+            Global.machine3BoxTime = 35;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -208,16 +207,16 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
             
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
             Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
+            Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             
-            Global.machine1BoxTime = 25;
+            Global.machine1BoxTime = 40;
             Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 25;
+            Global.machine3BoxTime = 30;
             Global.machine1accumulatedBoxesLimit = 3;
-            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine2accumulatedBoxesLimit = 4;
             Global.machine3accumulatedBoxesLimit = 3;
             Global.machine1BoxFirstTime = 6;
             Global.machine1Score = 10000;
@@ -234,11 +233,10 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(2);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
                        
             Global.machine1BoxTime = 30;
-            Global.machine2BoxTime = 30;
-            Global.machine3BoxTime = 30;
+            Global.machine2BoxTime = 35;
+            Global.machine3BoxTime = 40;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -253,16 +251,15 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
             
+            Global.requestBox.Add(2);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(3);
             
-            Global.machine1BoxTime = 30;
-            Global.machine2BoxTime = 30;
-            Global.machine3BoxTime = 30;
+            Global.machine1BoxTime = 35;
+            Global.machine2BoxTime = 35;
+            Global.machine3BoxTime = 35;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -277,16 +274,15 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
            
-            Global.requestBox.Add(2);
+            Global.requestBox.Add(3);
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(3);
             
             Global.machine1BoxTime = 30;
             Global.machine2BoxTime = 30;
-            Global.machine3BoxTime = 30;
+            Global.machine3BoxTime = 20;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -305,14 +301,12 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
             
-            Global.machine1BoxTime = 30;
+            Global.machine1BoxTime = 32;
             Global.machine2BoxTime = 28;
-            Global.machine3BoxTime = 32;
-            Global.machine1accumulatedBoxesLimit = 3;
-            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine3BoxTime = 25;
+            Global.machine1accumulatedBoxesLimit = 4;
+            Global.machine2accumulatedBoxesLimit = 4;
             Global.machine3accumulatedBoxesLimit = 3;
             Global.machine1BoxFirstTime = 6;
             Global.machine1Score = 10000;
@@ -330,11 +324,10 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(2);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
             
             Global.machine1BoxTime = 35;
             Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 23;
+            Global.machine3BoxTime = 35;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -353,12 +346,12 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(1);
             Global.requestBox.Add(2);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             
             Global.machine1BoxTime = 30;
             Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 23;
+            Global.machine3BoxTime = 26;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -378,7 +371,6 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
             Global.requestBox.Add(1);
             
             Global.machine1BoxTime = 30;
@@ -402,9 +394,6 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
-            Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
             
             Global.machine1BoxTime = 30;
             Global.machine2BoxTime = 25;
@@ -424,16 +413,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("NIVELLACTUAL: "+ num);
             
             Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             
-            Global.machine1BoxTime = 30;
+            Global.machine1BoxTime = 28;
             Global.machine2BoxTime = 25;
-            Global.machine3BoxTime = 26;
+            Global.machine3BoxTime = 27
+            ;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -450,12 +437,9 @@ public class GameManager : MonoBehaviour
             
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
+            Global.requestBox.Add(1);
             Global.requestBox.Add(2);
             Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
             
             Global.machine1BoxTime = 30;
             Global.machine2BoxTime = 25;
@@ -477,10 +461,7 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
             Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
             Global.requestBox.Add(1);
             
             Global.machine1BoxTime = 30;
@@ -506,9 +487,6 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
             
             Global.machine1BoxTime = 35;
             Global.machine2BoxTime = 29;
@@ -527,17 +505,13 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
             
-            Global.requestBox.Add(1);
+            Global.requestBox.Add(3);
             Global.requestBox.Add(1);
             Global.requestBox.Add(2);
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
-            Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
             
-            Global.machine1BoxTime = 34;
+            Global.machine1BoxTime = 30;
             Global.machine2BoxTime = 31;
             Global.machine3BoxTime = 32;
             Global.machine1accumulatedBoxesLimit = 3;
@@ -561,14 +535,12 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(1);
             Global.requestBox.Add(3);
             Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
             
-            Global.machine1BoxTime = 29;
-            Global.machine2BoxTime = 32;
-            Global.machine3BoxTime = 35;
-            Global.machine1accumulatedBoxesLimit = 3;
-            Global.machine2accumulatedBoxesLimit = 3;
+            Global.machine1BoxTime = 30;
+            Global.machine2BoxTime = 35;
+            Global.machine3BoxTime = 32;
+            Global.machine1accumulatedBoxesLimit = 4;
+            Global.machine2accumulatedBoxesLimit = 4;
             Global.machine3accumulatedBoxesLimit = 3;
             Global.machine1BoxFirstTime = 6;
             Global.machine1Score = 10000;
@@ -585,15 +557,10 @@ public class GameManager : MonoBehaviour
             Global.requestBox.Add(3);
             Global.requestBox.Add(2);
             Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
-            Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
             
-            Global.machine1BoxTime = 36;
+            Global.machine1BoxTime = 32;
             Global.machine2BoxTime = 31;
-            Global.machine3BoxTime = 22;
+            Global.machine3BoxTime = 30;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
             Global.machine3accumulatedBoxesLimit = 3;
@@ -608,28 +575,21 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("NIVELLACTUAL: "+ num);
             
-            Global.requestBox.Add(2);
+            Global.requestBox.Add(1);
+            Global.requestBox.Add(1);
             Global.requestBox.Add(3);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(1);
-            Global.requestBox.Add(1);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(2);
-            Global.requestBox.Add(3);
-            Global.requestBox.Add(1);
             Global.requestBox.Add(2);
             
-            Global.machine1BoxTime = 26;
-            Global.machine2BoxTime = 31;
-            Global.machine3BoxTime = 36;
+            Global.machine1BoxTime = 32;
+            Global.machine2BoxTime = 28;
+            Global.machine3BoxTime = 25;
             Global.machine1accumulatedBoxesLimit = 3;
             Global.machine2accumulatedBoxesLimit = 3;
-            Global.machine3accumulatedBoxesLimit = 3;
+            Global.machine3accumulatedBoxesLimit = 4;
             Global.machine1BoxFirstTime = 6;
             Global.machine1Score = 10000;
             Global.machine2Score = 15000;
             Global.machine3Score = 20000;
-
             break;
 
             default:
