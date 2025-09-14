@@ -6,13 +6,16 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5a06000252575f0a0c080f7714715d4443161e7a782c71617c7e1936e0b3643c
+      value: 5401555e5c0c595e0c0c597b44775e444115197d2d7974677b70496be0b8616e
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
+      value: 5a06000252575f0a0c080f7714715d4443161e7a782c71617c7e1936e0b3643c
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 5401555e5c0c595e0c0c597b44775e444115197d2d7974677b70496be0b8616e
+      value: 00050d0404065d0d5908087a49265a44154e417c757e73657a2b4830b4e13661
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
     RecentlyUsedScenePath-0:
       value: 22424703114646680e0b0227036c6f2330282c23212d2a39232c5326ece92021
@@ -64,4 +67,5 @@ EditorUserSettings:
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
+  m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
